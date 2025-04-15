@@ -1,0 +1,6 @@
+.main-container {
+  display: grid;
+  grid:
+    'a b c'
+    'd b e';
+}
