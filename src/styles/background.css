@@ -3,14 +3,27 @@
   z-index: 0;
 
   display: grid;
-  grid-template-columns: repeat(12,auto);
+  grid-template-columns: repeat(var(--background-cols),1fr);
+  grid-template-rows: repeat(var(--background-rows),1fr);
+
+  overflow: hidden;
+
+  width: 100%;
+  height: 100%;
+
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: solid 2px var(--fg);
 }
 
 .background-grid-item {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   border: solid 2px var(--fg);
+
   background-color: #FF00FF;
-  width: 8.3vw;
-  height: 8.3vh;
 }
 
 .main {
