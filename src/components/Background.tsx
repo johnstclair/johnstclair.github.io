@@ -26,12 +26,13 @@ function Background({ children }: props ) {
   return (
     <>
       <div className="background-container">
-        {Array.from({ length: Math.floor(document.body.clientHeight / 100) }).map(_ => {
+        {Array.from({ length: Math.floor(document.body.clientHeight / 100) }).map(() => {
           return (<>
-            {Array.from({ length: Math.floor(document.body.clientWidth / 100) }).map(_ => {
+            {Array.from({ length: Math.floor(document.body.clientWidth / 100) }).map(() => {
               document.documentElement.style.setProperty('--background-cols', `${Math.floor(document.body.clientWidth / 100)}`);
               document.documentElement.style.setProperty('--background-rows', `${Math.floor(document.body.clientHeight / 100)}`);
-              return <motion.div className="background-grid-item" ></motion.div>
+              return <motion.div 
+                className="background-grid-item" ></motion.div>
             })}
           </>) 
         })}

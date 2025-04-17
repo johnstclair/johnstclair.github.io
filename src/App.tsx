@@ -14,7 +14,7 @@ function App() {
           y: 0,
           transition: {
             ease: "easeInOut",
-            duration: 0.1
+            duration: 0.5
           }
         }}
 
