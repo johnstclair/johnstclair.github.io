@@ -1,16 +1,19 @@
 :root {
+  --primary: #6950C9;
+  --secondary: #42A0B3;
+  --bg: #1C1C1C;
+  --alt-bg: #979797;
+  --fg: #e7e7e7;
+
+  background-image: var(--bg);
+}
+
+main {
   display: grid;
   align-items: center;
   place-items: center;
-
-  background-image: url("https://72bb5d36-c108-4b6b-b8bf-096180d6006f.mdnplay.dev/en-US/docs/Web/CSS/backdrop-filter/anemones.jpg");
-  background-image: repeating-linear-gradient(
-    45deg,
-    #606dbc,
-    #606dbc 10px,
-    #465298 10px,
-    #465298 20px
-  );
+  width: 100vw;
+  height: 100vh;
 }
 
 .main-container {
@@ -18,17 +21,23 @@
   grid-template-areas:
     "a b c"
     "d b e";
-  grid-template-columns: repeat(3,23em); /* Adjust as needed */
-  grid-template-rows: repeat(2,23em); /* Adjust as needed */
+  grid-template-columns: repeat(3,23em);
+  grid-template-rows: repeat(2,23em);
   gap: 1.8em; 
 }
 
 .block {
   background-color: rgb(112 112 132 / 30%);
-  backdrop-filter: sepia(100%);
+  backdrop-filter: blur(3px);
 
   padding: 1em;
   border-radius: 2em;
+
+  transition: .5s;
+}
+
+.block:hover {
+  backdrop-filter: blur(4.5px);
 }
 
 .project-block {
