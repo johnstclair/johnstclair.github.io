@@ -1,6 +1,53 @@
+:root {
+  display: grid;
+  align-items: center;
+  place-items: center;
+
+  background-image: url("https://72bb5d36-c108-4b6b-b8bf-096180d6006f.mdnplay.dev/en-US/docs/Web/CSS/backdrop-filter/anemones.jpg");
+  background-image: repeating-linear-gradient(
+    45deg,
+    #606dbc,
+    #606dbc 10px,
+    #465298 10px,
+    #465298 20px
+  );
+}
+
 .main-container {
   display: grid;
-  grid:
-    'a b c'
-    'd b e';
+  grid-template-areas:
+    "a b c"
+    "d b e";
+  grid-template-columns: repeat(3,23em); /* Adjust as needed */
+  grid-template-rows: repeat(2,23em); /* Adjust as needed */
+  gap: 1.8em; 
 }
+
+.block {
+  background-color: rgb(112 112 132 / 30%);
+  backdrop-filter: sepia(100%);
+
+  padding: 1em;
+  border-radius: 2em;
+}
+
+.project-block {
+  grid-area: a;
+}
+
+.about-me-block {
+  grid-area: b;
+}
+
+.logo-block {
+  grid-area: c;
+}
+
+.technologies-block {
+  grid-area: d;
+}
+
+.small-links-block {
+  grid-area: e;
+}
+
