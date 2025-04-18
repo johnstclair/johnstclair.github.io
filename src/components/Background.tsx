@@ -21,12 +21,33 @@ function useWindowSize() {
 }
 
 function checkSafety(li: tile[][], r: number, c: number): boolean {
+  if (r == -1 || c == -1) {
+    return false
+  }
   if (li.length > r) {
     if (li[r].length > c) {
       return true
     }
   }
   return false 
+}
+
+function allTheSame(li: tile[][]): boolean {
+  if (li.length == 0) {
+    return false
+  }
+  if (li[0].length == 0) {
+    return false
+  }
+  const output = li[0][0].dark;
+  for (let i = 0; i < li.length; i++) {
+    for (let j = 0; j < li[i].length; j++) {
+      if (output != li[i][j].dark) {
+        return false
+      }
+    }
+  }
+  return true
 }
 
 interface tile {
@@ -38,6 +59,8 @@ function Background({ children }: props ) {
   const [effectRunner, setEffectRunner] = useState<number>(3);
   const [darkTiles, setDarkTiles] = useState<tile[][]>([]);
   const [tilePolarity, setTilePolarity] = useState<boolean>(true);
+
+  const [update, setUpdate] = useState<number>(0);
 
   useWindowSize()
 
@@ -52,11 +75,9 @@ function Background({ children }: props ) {
       window.dispatchEvent(new Event('resize'));
 
       const output = [];
-      console.log(Math.floor(document.body.scrollWidth / 100))
-      console.log(Math.floor(document.body.scrollHeight / 100))
-      for (let i = 0; i < Math.floor(document.body.scrollWidth / 100); i++) {
+      for (let i = 0; i < Math.floor(document.body.scrollHeight / 100); i++) {
         output.push([])
-        for (let j = 0; j < Math.floor(document.body.scrollHeight / 100); j++) {
+        for (let j = 0; j < Math.floor(document.body.scrollWidth / 100); j++) {
           output[i].push({dark: true, updated: false});
         }
       }
@@ -73,16 +94,34 @@ function Background({ children }: props ) {
     output.flat().map(v => {
       v.updated = false;
     })
-  }, [darkTiles])
+    if (output.length > 0) {
+      if (!allTheSame(output)) {
+        setTimeout(() => {
+          for (let i = 0; i < output.length; i++) {
+            for (let j = 0; j < output[i].length; j++) {
+              if (!output[i][j].updated && output[i][j].dark == tilePolarity) {
+                if (checkSafety(output,i-1,j)) {output[i-1][j] = {dark: tilePolarity, updated: true}}
+                if (checkSafety(output,i+1,j)) {output[i+1][j] = {dark: tilePolarity, updated: true}}
+                if (checkSafety(output,i,j-1)) {output[i][j-1] = {dark: tilePolarity, updated: true}}
+                if (checkSafety(output,i,j+1)) {output[i][j+1] = {dark: tilePolarity, updated: true}}
+              }
+            }
+          }
+        setUpdate(update+1)
+        }, 50);
+      }
+    }
+    setDarkTiles(output);
+  }, [update])
 
   console.log(darkTiles)
 
   return (
     <>
       <div className="background-container">
-        {Array.from({ length: Math.floor(document.body.scrollWidth / 100) }).map((_,r) => {
+        {Array.from({ length: Math.floor(document.body.scrollHeight / 100) }).map((_,r) => {
           return (<>
-            {Array.from({ length: Math.floor(document.body.scrollHeight / 100) }).map((_,c) => {
+            {Array.from({ length: Math.floor(document.body.scrollWidth / 100) }).map((_,c) => {
               // checks if the tile is safe (exists), then sets to correct color, if not safe default to polarity mode
               const tileBgColor = checkSafety(darkTiles, r, c) ? darkTiles[r][c].dark ? 'dark' : 'light' : 'var(--bg)';
 
@@ -98,13 +137,12 @@ function Background({ children }: props ) {
                   document.documentElement.style.setProperty('--trans', `var(--${polarity}-trans)`);
 
                   setTilePolarity(!tilePolarity)
+                  setUpdate(update+1)
                   if (checkSafety(darkTiles, r, c)) {
                     const output = darkTiles;
                     output[r][c] = {dark: !output[r][c].dark, updated: true};
                     setDarkTiles(output);
-                  } else {
-                    console.log(`${r}r ${darkTiles.length} |  ${c}c ${darkTiles[r].length}`)
-                  }
+                  } 
                 }}
                 className="background-grid-item"
                 style={{backgroundColor: `var(--${tileBgColor}-bg)`}}></motion.div>
