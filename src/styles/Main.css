@@ -35,7 +35,16 @@
   padding: 1em;
   border-radius: 2em;
 
-  transition: .2s;
+  transition: .4s;
+
+  color: var(--fg);
+
+  box-shadow: 0 0 1em #080808;
+}
+
+.block:hover {
+  color: var(--bg);
+  box-shadow: 0 0 1em #F8F8F8;
 }
 
 .project-block {
@@ -52,6 +61,16 @@
   display: flex;
   align-items: center;
   place-items: center;
+
+}
+
+.logo-block img {
+
+  pointer-events: auto;
+}
+
+.logo-block img:hover {
+  filter: invert(100%);
 }
 
 .technologies-block {
@@ -70,6 +89,8 @@
 .tech-stack-img {
   padding: 1em;
   border-radius: 1.5em;
+
+  width: 250%;
 
   background-color: rgb(152 152 152 / 10%);
 }

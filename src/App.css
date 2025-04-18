@@ -4,11 +4,21 @@
 
   --dark-bg: #1C1C1C;
   --dark-fg: #e7e7e7;
+  --dark-trans: #8C8C8C;
 
   --light-bg: #e2e2e2;
   --light-fg: #1C1C1C;
+  --dark-trans: #b5b5b5;
 
-  --tile-color: var(--dark-bg);
+  --bg: var(--dark-bg);
+  --fg: var(--dark-fg);
+  --trans: var(--dark-trans);
+
+  --trans-one: 70%;
+  --trans-two: 50%;
+  --trans-three: 30%;
+
+  --tile-color: var(--bg);
 
   --scroll-height: 0px;
   --scroll-width: 0px;
@@ -72,13 +82,14 @@ main {
 }
 
 .hoverable {
-  background-color: rgb(112 112 112 / 50%);
-  backdrop-filter: blur(3px);
+  /* background-color: rgb(112 112 112 / 20%); */
+  background-color: var(--trans) / var(--trans-two);
+  backdrop-filter: blur(8px);
 }
 
 .hoverable:hover {
-  background-color: rgb(92 92 92 / 70%);
-  backdrop-filter: blur(4.5px);
+  /* background-color: rgb(92 92 92 / 70%); */
+  backdrop-filter: blur(6px) invert(75%);
 }
 
 .nav-buttons-container {

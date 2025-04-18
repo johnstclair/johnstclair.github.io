@@ -5,6 +5,8 @@ import "../../styles/Main.css";
 import logo from "../../assets/logo.png";
 import information from "../../assets/information.json"
 
+import Tooltip from "../Tooltip";
+
 function Main() {
   return (<>
     <motion.div 
@@ -67,18 +69,21 @@ function Main() {
         {information["technologies-icons"].map((v,i) => {
           return (<>
             <div>
-              <motion.img 
-                whileHover={{
-                  rotate: ["360deg","0deg"],
-                  transition: {
-                    bounce: .5,
-                    type: "spring",
-                  }
-                }}
-                animate={{rotate: "0deg"}}
-                className="tech-stack-img" 
-                key={i} 
-                src={v.link} />
+              <Tooltip delay={800} content={v.name} direction="top">
+                <motion.img 
+                  whileHover={{
+                    rotate: ["360deg","0deg"],
+                    transition: {
+                      duration: .8,
+                      bounce: .5,
+                      type: "spring",
+                    }
+                  }}
+                  animate={{rotate: "0deg"}}
+                  className="tech-stack-img" 
+                  key={i} 
+                  src={v.link} />
+              </Tooltip>
             </div>
           </>)
         })}

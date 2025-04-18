@@ -20,8 +20,24 @@ function useWindowSize() {
   return size;
 }
 
+function checkSafety(li: tile[][], r: number, c: number): boolean {
+  if (li.length > r) {
+    if (li[r].length > c) {
+      return true
+    }
+  }
+  return false 
+}
+
+interface tile {
+  dark: boolean,
+  updated: boolean,
+}
+
 function Background({ children }: props ) {
   const [effectRunner, setEffectRunner] = useState<number>(3);
+  const [darkTiles, setDarkTiles] = useState<tile[][]>([]);
+  const [tilePolarity, setTilePolarity] = useState<boolean>(true);
 
   useWindowSize()
 
@@ -35,33 +51,63 @@ function Background({ children }: props ) {
     setTimeout(() => {
       window.dispatchEvent(new Event('resize'));
 
+      const output = [];
+      console.log(Math.floor(document.body.scrollWidth / 100))
+      console.log(Math.floor(document.body.scrollHeight / 100))
+      for (let i = 0; i < Math.floor(document.body.scrollWidth / 100); i++) {
+        output.push([])
+        for (let j = 0; j < Math.floor(document.body.scrollHeight / 100); j++) {
+          output[i].push({dark: true, updated: false});
+        }
+      }
+      setDarkTiles(output)
+
       if (effectRunner != 0) {
         setEffectRunner(effectRunner-1);
       }
     }, 125);
   }, [effectRunner])
 
+  useEffect(() => {
+    const output = darkTiles
+    output.flat().map(v => {
+      v.updated = false;
+    })
+  }, [darkTiles])
+
+  console.log(darkTiles)
+
   return (
     <>
       <div className="background-container">
-        {Array.from({ length: Math.floor(document.body.scrollHeight / 100) }).map((_,r) => {
+        {Array.from({ length: Math.floor(document.body.scrollWidth / 100) }).map((_,r) => {
           return (<>
-            {Array.from({ length: Math.floor(document.body.scrollWidth / 100) }).map((_,c) => {
+            {Array.from({ length: Math.floor(document.body.scrollHeight / 100) }).map((_,c) => {
+              // checks if the tile is safe (exists), then sets to correct color, if not safe default to polarity mode
+              const tileBgColor = checkSafety(darkTiles, r, c) ? darkTiles[r][c].dark ? 'dark' : 'light' : 'var(--bg)';
+
               return <motion.div 
                 key={`${r} + ${c}`}
                 whileTap={{scale: 1.2}}
                 onClick={() => {
-                  const bg1 = window.getComputedStyle(document.body).getPropertyValue('--dark-bg');
-                  const bg2 = window.getComputedStyle(document.body).getPropertyValue('--light-bg');
-                  const fg1 = window.getComputedStyle(document.body).getPropertyValue('--dark-fg');
-                  const fg2 = window.getComputedStyle(document.body).getPropertyValue('--light-fg');
-                  console.log(`${bg1}${bg2}${fg1}${fg2}`)
-                  document.documentElement.style.setProperty('--dark-bg', `${bg2}`);
-                  document.documentElement.style.setProperty('--light-bg', `${bg1}`);
-                  document.documentElement.style.setProperty('--dark-fg', `${fg2}`);
-                  document.documentElement.style.setProperty('--light-fg', `${fg1}`);
+                  // TODO: currently NEED to hardcode the val of the dark bg, fix this
+                  const polarity: string = window.getComputedStyle(document.body).getPropertyValue('--bg') == "#1C1C1C" ? "light" : "dark";
+
+                  document.documentElement.style.setProperty('--bg', `var(--${polarity}-bg)`);
+                  document.documentElement.style.setProperty('--fg', `var(--${polarity}-fg)`);
+                  document.documentElement.style.setProperty('--trans', `var(--${polarity}-trans)`);
+
+                  setTilePolarity(!tilePolarity)
+                  if (checkSafety(darkTiles, r, c)) {
+                    const output = darkTiles;
+                    output[r][c] = {dark: !output[r][c].dark, updated: true};
+                    setDarkTiles(output);
+                  } else {
+                    console.log(`${r}r ${darkTiles.length} |  ${c}c ${darkTiles[r].length}`)
+                  }
                 }}
-                className="background-grid-item" ></motion.div>
+                className="background-grid-item"
+                style={{backgroundColor: `var(--${tileBgColor}-bg)`}}></motion.div>
             })}
           </>) 
         })}
