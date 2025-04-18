@@ -2,8 +2,10 @@
   --primary: #6950C9;
   --secondary: #42A0B3;
   --bg: #1C1C1C;
-  --alt-bg: #979797;
+  --bg-alt: #e2e2e2;
   --fg: #e7e7e7;
+
+  --tile-color: var(--bg);
 
   animation: background-pan 10s linear infinite;
   background: linear-gradient( to right, var(--primary), var(--secondary), var(--primary));
@@ -29,6 +31,8 @@ main {
 }
 
 .main-container {
+  margin: 1em;
+
   display: grid;
   grid-template-areas:
     "a b c"
@@ -49,7 +53,8 @@ main {
 }
 
 .block:hover {
-  backdrop-filter: blur(4.5px) invert(100%);
+  background-color: rgb(92 92 92 / 70%);
+  backdrop-filter: blur(4.5px);
 }
 
 .project-block {

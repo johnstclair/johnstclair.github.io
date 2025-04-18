@@ -17,11 +17,11 @@
 
   background-color: transparent;
 
-  transition-duration: 2s;
-  background-color: #808080;
+  transition-duration: .3s;
+  background-color: var(--tile-color);
 }
 
 .background-grid-item:hover {
-  /*transition-duration: 0ms;*/
-  /*background-color: #808080;*/
+  transition-duration: 0ms;
+  scale: .9;
 }

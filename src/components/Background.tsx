@@ -32,6 +32,10 @@ function Background({ children }: props ) {
               document.documentElement.style.setProperty('--background-cols', `${Math.floor(document.body.clientWidth / 100)}`);
               document.documentElement.style.setProperty('--background-rows', `${Math.floor(document.body.clientHeight / 100)}`);
               return <motion.div 
+                whileTap={{scale: 1.2}}
+                onClick={() => {
+                  document.documentElement.style.setProperty('--tile-color', document.documentElement.style.getPropertyValue('--tile-color') == "var(--bg)" ? "var(--bg-alt)" : "var(--bg)");
+                }}
                 className="background-grid-item" ></motion.div>
             })}
           </>) 
