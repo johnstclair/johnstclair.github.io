@@ -100,21 +100,20 @@ function Background({ children }: props ) {
           for (let i = 0; i < output.length; i++) {
             for (let j = 0; j < output[i].length; j++) {
               if (!output[i][j].updated && output[i][j].dark == tilePolarity) {
-                if (checkSafety(output,i-1,j)) {output[i-1][j] = {dark: tilePolarity, updated: true}}
-                if (checkSafety(output,i+1,j)) {output[i+1][j] = {dark: tilePolarity, updated: true}}
-                if (checkSafety(output,i,j-1)) {output[i][j-1] = {dark: tilePolarity, updated: true}}
-                if (checkSafety(output,i,j+1)) {output[i][j+1] = {dark: tilePolarity, updated: true}}
+                console.log(`dark: ${tilePolarity} | `)
+                if (checkSafety(output,i-1,j)) {if (output[i-1][j].dark != tilePolarity) {output[i-1][j] = {dark: tilePolarity, updated: true}}}
+                if (checkSafety(output,i+1,j)) {if (output[i+1][j].dark != tilePolarity) {output[i+1][j] = {dark: tilePolarity, updated: true}}}
+                if (checkSafety(output,i,j-1)) {if (output[i][j-1].dark != tilePolarity) {output[i][j-1] = {dark: tilePolarity, updated: true}}}
+                if (checkSafety(output,i,j+1)) {if (output[i][j+1].dark != tilePolarity) {output[i][j+1] = {dark: tilePolarity, updated: true}}}
               }
             }
           }
         setUpdate(update+1)
-        }, 50);
+        }, 25);
       }
     }
     setDarkTiles(output);
   }, [update])
-
-  console.log(darkTiles)
 
   return (
     <>
