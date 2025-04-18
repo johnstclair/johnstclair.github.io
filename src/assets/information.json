@@ -1,0 +1,23 @@
+{
+  "about-me-header": "Hi, I'm John",
+  "about-me-content": "I enjoy programming and expanding my knowledge.  In the past I have worked with languages such as Typescript, Rust, Python, C, C# and Java. I have used tools such as Godot, Nix - as well as other distros, Git, Github, and Tauri. I have experience with soldering and I love playing with microcontrollers, I've mainly used Arduinos and Raspberry Pis.",
+  "technologies-header": "My Stack",
+  "technologies-icons": [
+    {
+      "name": "rust",
+      "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg"
+    },
+    {
+      "name": "typescript",
+      "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+    },
+    {
+      "name": "tauri",
+      "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tauri/tauri-original.svg"
+    },
+    {
+      "name": "reactjs",
+      "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+    }
+  ]
+}

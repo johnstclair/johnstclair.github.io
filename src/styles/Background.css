@@ -18,7 +18,7 @@
   background-color: transparent;
 
   transition-duration: .3s;
-  background-color: var(--tile-color);
+  background-color: var(--dark-bg);
 
   pointer-events: auto;
 }

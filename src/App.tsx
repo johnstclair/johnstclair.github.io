@@ -34,10 +34,10 @@ function App() {
           className="main-container">
             {pages[page]}
         </motion.div>
-        <motion.div className="nav-buttons-container">
-          <button onClick={() => setPage(0)}><FontAwesomeIcon icon={faHouse} /></button>
-          <button onClick={() => setPage(1)}><FontAwesomeIcon icon={faCode} /></button>
-          <button onClick={() => setPage(2)}><FontAwesomeIcon icon={faLayerGroup} /></button>
+        <motion.div className="nav-buttons-container hoverable">
+          <button className={page == 0 ? "active" : ""} onClick={() => setPage(0)}><FontAwesomeIcon icon={faHouse} /></button>
+          <button className={page == 1 ? "active" : ""} onClick={() => setPage(1)}><FontAwesomeIcon icon={faCode} /></button>
+          <button className={page == 2 ? "active" : ""} onClick={() => setPage(2)}><FontAwesomeIcon icon={faLayerGroup} /></button>
         </motion.div>
       </div>
     </Background>

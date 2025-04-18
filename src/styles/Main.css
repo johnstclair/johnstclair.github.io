@@ -13,8 +13,8 @@
 @media (max-width: 1212px) {
   .main-container {
     grid-template-areas: 
-      "a b"
       "c b"
+      "a b"
       "d e";
   }
 }
@@ -22,28 +22,20 @@
 @media (max-width: 785px) {
   .main-container {
     grid-template-areas: 
-      "a"
+      "c"
       "b"
-      "c"
-      "c"
+      "b"
+      "a"
       "d"
       "e";
   }
 }
 
 .block {
-  background-color: rgb(112 112 112 / 50%);
-  backdrop-filter: blur(3px);
-
   padding: 1em;
   border-radius: 2em;
 
   transition: .2s;
-}
-
-.block:hover {
-  background-color: rgb(92 92 92 / 70%);
-  backdrop-filter: blur(4.5px);
 }
 
 .project-block {
@@ -56,14 +48,30 @@
 
 .logo-block {
   grid-area: c;
-}
 
-.logo-block img {
-  position: absolute;
+  display: flex;
+  align-items: center;
+  place-items: center;
 }
 
 .technologies-block {
   grid-area: d;
+}
+
+.tech-stack-imgs {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+  grid-template-columns: 35% 35%;
+  gap: 10%;
+}
+
+.tech-stack-img {
+  padding: 1em;
+  border-radius: 1.5em;
+
+  background-color: rgb(152 152 152 / 10%);
 }
 
 .small-links-block {

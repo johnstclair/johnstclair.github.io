@@ -1,11 +1,14 @@
 :root {
   --primary: #649173;
   --secondary: #dbd5aa;
-  --bg: #1C1C1C;
-  --bg-alt: #e2e2e2;
-  --fg: #e7e7e7;
 
-  --tile-color: var(--bg);
+  --dark-bg: #1C1C1C;
+  --dark-fg: #e7e7e7;
+
+  --light-bg: #e2e2e2;
+  --light-fg: #1C1C1C;
+
+  --tile-color: var(--dark-bg);
 
   --scroll-height: 0px;
   --scroll-width: 0px;
@@ -18,21 +21,6 @@
   scrollbar-width: none;
 }
 
-* {
-  pointer-events: none;
-}
-
-.block,
-.nav-buttons-container,
-button {
-  pointer-events: auto;
-}
-
-
-::-webkit-scrollbar {
-  display: none;
-}
-
 @keyframes background-pan {
   from {
     background-position: 0% center;
@@ -40,6 +28,32 @@ button {
   to {
     background-position: -200% center;
   }
+}
+
+* {
+  pointer-events: none;
+}
+
+.block,
+.nav-buttons-container,
+.tech-stack-imgs img,
+button {
+  pointer-events: auto;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-top: .2em;
+  margin-bottom: .2em;
+}
+
+p {
+  font-size: 1.2em;
+  text-indent: 25px;
 }
 
 main {
@@ -57,10 +71,17 @@ main {
   place-items: center;
 }
 
-.nav-buttons-container {
+.hoverable {
   background-color: rgb(112 112 112 / 50%);
   backdrop-filter: blur(3px);
+}
 
+.hoverable:hover {
+  background-color: rgb(92 92 92 / 70%);
+  backdrop-filter: blur(4.5px);
+}
+
+.nav-buttons-container {
   padding: .8em;
   border-radius: 1.5em;
 
@@ -72,11 +93,6 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   gap: .8em;
-}
-
-.nav-buttons-container:hover {
-  background-color: rgb(92 92 92 / 70%);
-  backdrop-filter: blur(4.5px);
 }
 
 @media (max-width: 1292px) {
@@ -99,10 +115,16 @@ main {
   transition: .3s;
 }
 
-.nav-buttons-container button:hover {
-  background-color: rgb(92 92 92 / 70%);
+.nav-buttons-container button.active {
+  background-color: rgb(212 212 212 / 70%);
+  color: var(--dark-bg);
 }
 
 .nav-buttons-container button:active {
-  background-color: rgb(80 80 80 / 80%);
+  background-color: rgb(180 180 180 / 65%);
+  scale: 1.1;
+}
+
+.nav-buttons-container button:hover {
+  background-color: rgb(92 92 92 / 70%);
 }

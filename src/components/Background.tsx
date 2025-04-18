@@ -31,8 +31,6 @@ function Background({ children }: props ) {
   document.documentElement.style.setProperty('--scroll-width', `${document.body.scrollWidth}px`);
   document.documentElement.style.setProperty('--scroll-height', `${document.body.scrollHeight}px`);
 
-  console.log(`${document.body.scrollHeight}h by ${document.body.scrollWidth}w`)
-
   useEffect(() => {
     setTimeout(() => {
       window.dispatchEvent(new Event('resize'));
@@ -46,13 +44,22 @@ function Background({ children }: props ) {
   return (
     <>
       <div className="background-container">
-        {Array.from({ length: Math.floor(document.body.scrollHeight / 100) }).map(() => {
+        {Array.from({ length: Math.floor(document.body.scrollHeight / 100) }).map((_,r) => {
           return (<>
-            {Array.from({ length: Math.floor(document.body.scrollWidth / 100) }).map(() => {
+            {Array.from({ length: Math.floor(document.body.scrollWidth / 100) }).map((_,c) => {
               return <motion.div 
+                key={`${r} + ${c}`}
                 whileTap={{scale: 1.2}}
                 onClick={() => {
-                  document.documentElement.style.setProperty('--tile-color', document.documentElement.style.getPropertyValue('--tile-color') == "var(--bg)" ? "var(--bg-alt)" : "var(--bg)");
+                  const bg1 = window.getComputedStyle(document.body).getPropertyValue('--dark-bg');
+                  const bg2 = window.getComputedStyle(document.body).getPropertyValue('--light-bg');
+                  const fg1 = window.getComputedStyle(document.body).getPropertyValue('--dark-fg');
+                  const fg2 = window.getComputedStyle(document.body).getPropertyValue('--light-fg');
+                  console.log(`${bg1}${bg2}${fg1}${fg2}`)
+                  document.documentElement.style.setProperty('--dark-bg', `${bg2}`);
+                  document.documentElement.style.setProperty('--light-bg', `${bg1}`);
+                  document.documentElement.style.setProperty('--dark-fg', `${fg2}`);
+                  document.documentElement.style.setProperty('--light-fg', `${fg1}`);
                 }}
                 className="background-grid-item" ></motion.div>
             })}
