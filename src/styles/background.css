@@ -24,7 +24,6 @@
 }
 
 .background-grid-item:hover {
-  transition-duration: 0ms;
-
-  background-color: #A0a0a0;
+  /*transition-duration: 0ms;*/
+  /*background-color: #808080;*/
 }

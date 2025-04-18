@@ -12,6 +12,7 @@ main {
   display: grid;
   align-items: center;
   place-items: center;
+
   width: 100vw;
   height: 100vh;
 }
@@ -27,7 +28,7 @@ main {
 }
 
 .block {
-  background-color: rgb(112 112 132 / 30%);
+  background-color: rgb(112 112 112 / 50%);
   backdrop-filter: blur(3px);
 
   padding: 1em;
@@ -37,7 +38,7 @@ main {
 }
 
 .block:hover {
-  backdrop-filter: blur(4.5px);
+  backdrop-filter: blur(4.5px) invert(100%);
 }
 
 .project-block {

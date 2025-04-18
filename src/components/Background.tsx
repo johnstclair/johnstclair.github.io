@@ -1,7 +1,7 @@
 import { useLayoutEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-import "../styles/background.css"
+import "../styles/Background.css"
 
 interface props {
   children: JSX.Element,
