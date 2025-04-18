@@ -1,0 +1,13 @@
+import "../../styles/Main.css";
+
+function Main() {
+  return (<>
+    <div className="project-block block">hii</div>
+    <div className="about-me-block block">hii</div>
+    <div className="logo-block block">hii</div>
+    <div className="technologies-block block">hii</div>
+    <div className="small-links-block block">hii</div>
+  </>)
+}
+
+export default Main

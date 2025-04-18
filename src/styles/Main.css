@@ -1,0 +1,68 @@
+.main-container {
+  padding: 1.5em 1em;
+
+  display: grid;
+  grid-template-areas:
+    "a b c"
+    "d b e";
+  grid-auto-columns: 23em;
+  grid-auto-rows: 23em;
+  gap: 1.8em; 
+}
+
+@media (max-width: 1212px) {
+  .main-container {
+    grid-template-areas: 
+      "a b"
+      "c b"
+      "d e";
+  }
+}
+
+@media (max-width: 785px) {
+  .main-container {
+    grid-template-areas: 
+      "a"
+      "b"
+      "c"
+      "c"
+      "d"
+      "e";
+  }
+}
+
+.block {
+  background-color: rgb(112 112 112 / 50%);
+  backdrop-filter: blur(3px);
+
+  padding: 1em;
+  border-radius: 2em;
+
+  transition: .5s;
+}
+
+.block:hover {
+  background-color: rgb(92 92 92 / 70%);
+  backdrop-filter: blur(4.5px);
+}
+
+.project-block {
+  grid-area: a;
+}
+
+.about-me-block {
+  grid-area: b;
+}
+
+.logo-block {
+  grid-area: c;
+}
+
+.technologies-block {
+  grid-area: d;
+}
+
+.small-links-block {
+  grid-area: e;
+}
+
