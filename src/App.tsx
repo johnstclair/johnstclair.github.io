@@ -18,26 +18,28 @@ function App() {
 
   return (
     <Background>
-      <motion.div 
-        initial = {{
-          scale: 0.9,
-        }}
-        animate = {{
-          scale: 1.0,
-          transition: {
-            ease: "easeInOut",
-            duration: 0.5
-          }
-        }}
+      <div className="inner-main-container">
+        <motion.div 
+          initial = {{
+            scale: 0.9,
+          }}
+          animate = {{
+            scale: 1.0,
+            transition: {
+              ease: "easeInOut",
+              duration: 0.5
+            }
+          }}
 
-        className="main-container">
-          {pages[page]}
-      </motion.div>
-      <motion.div className="nav-buttons-container">
-        <button onClick={() => setPage(0)}><FontAwesomeIcon icon={faHouse} /></button>
-        <button onClick={() => setPage(1)}><FontAwesomeIcon icon={faCode} /></button>
-        <button onClick={() => setPage(2)}><FontAwesomeIcon icon={faLayerGroup} /></button>
-      </motion.div>
+          className="main-container">
+            {pages[page]}
+        </motion.div>
+        <motion.div className="nav-buttons-container">
+          <button onClick={() => setPage(0)}><FontAwesomeIcon icon={faHouse} /></button>
+          <button onClick={() => setPage(1)}><FontAwesomeIcon icon={faCode} /></button>
+          <button onClick={() => setPage(2)}><FontAwesomeIcon icon={faLayerGroup} /></button>
+        </motion.div>
+      </div>
     </Background>
   )
 }

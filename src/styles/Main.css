@@ -58,6 +58,10 @@
   grid-area: c;
 }
 
+.logo-block img {
+  position: absolute;
+}
+
 .technologies-block {
   grid-area: d;
 }

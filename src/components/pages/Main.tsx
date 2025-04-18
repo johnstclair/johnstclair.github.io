@@ -2,6 +2,8 @@ import { motion } from "motion/react";
 
 import "../../styles/Main.css";
 
+import logo from "../../assets/logo.png";
+
 function Main() {
   return (<>
     <motion.div 
@@ -44,7 +46,6 @@ function Main() {
       }}
 
       className="logo-block block">
-      logo
     </motion.div>
     <motion.div 
       initial = {{

@@ -43,12 +43,18 @@ button {
 }
 
 main {
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: center;
 
   width: 100vw;
   height: 100vh;
+}
+
+.inner-main-container {
+  display: flex;
+  align-items: center;
+  place-items: center;
 }
 
 .nav-buttons-container {
@@ -60,6 +66,9 @@ main {
 
   transition: .5s;
 
+  width: 3.5em;
+  height: 12em;
+
   display: grid;
   grid-template-columns: 1fr;
   gap: .8em;
@@ -68,6 +77,15 @@ main {
 .nav-buttons-container:hover {
   background-color: rgb(92 92 92 / 70%);
   backdrop-filter: blur(4.5px);
+}
+
+@media (max-width: 1292px) {
+  .nav-buttons-container {
+    position: fixed;
+    z-index: 2;
+    top: 1em;
+    right: 1em;
+  }
 }
 
 .nav-buttons-container button {
