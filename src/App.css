@@ -5,7 +5,18 @@
   --alt-bg: #979797;
   --fg: #e7e7e7;
 
-  background-image: var(--bg);
+  animation: background-pan 10s linear infinite;
+  background: linear-gradient( to right, var(--primary), var(--secondary), var(--primary));
+  background-size: 200%;
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: -200% center;
+  }
 }
 
 main {
