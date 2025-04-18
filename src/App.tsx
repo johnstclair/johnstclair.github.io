@@ -1,26 +1,42 @@
 import { motion } from "motion/react"
+import { useState } from "react"
 
 import Background from './components/Background'
 import Main from "./components/pages/Main"
 
 import './App.css'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHouse } from '@fortawesome/free-solid-svg-icons'
+import { faCode } from '@fortawesome/free-solid-svg-icons'
+import { faLayerGroup } from '@fortawesome/free-solid-svg-icons'
+
+
 function App() {
+  const pages = [<Main />,<></>]
+  const [page, setPage] = useState<number>(0);
+
   return (
     <Background>
       <motion.div 
         initial = {{
-          y: "100vh",
+          scale: 0.9,
         }}
         animate = {{
-          y: 0,
+          scale: 1.0,
           transition: {
             ease: "easeInOut",
             duration: 0.5
           }
         }}
+
         className="main-container">
-        <Main />
+          {pages[page]}
+      </motion.div>
+      <motion.div className="nav-buttons-container">
+        <button onClick={() => setPage(0)}><FontAwesomeIcon icon={faHouse} /></button>
+        <button onClick={() => setPage(1)}><FontAwesomeIcon icon={faCode} /></button>
+        <button onClick={() => setPage(2)}><FontAwesomeIcon icon={faLayerGroup} /></button>
       </motion.div>
     </Background>
   )

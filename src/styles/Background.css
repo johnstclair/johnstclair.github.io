@@ -1,6 +1,6 @@
 .background-container {
   position: absolute;
-  z-index: 0;
+  z-index: -1;
 
   display: grid;
   grid-template-columns: repeat(var(--background-cols),1fr);
@@ -19,6 +19,8 @@
 
   transition-duration: .3s;
   background-color: var(--tile-color);
+
+  pointer-events: auto;
 }
 
 .background-grid-item:hover {
