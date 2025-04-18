@@ -1,15 +1,25 @@
 :root {
-  --primary: #6950C9;
-  --secondary: #42A0B3;
+  --primary: #649173;
+  --secondary: #dbd5aa;
   --bg: #1C1C1C;
   --bg-alt: #e2e2e2;
   --fg: #e7e7e7;
 
   --tile-color: var(--bg);
 
+  --scroll-height: 0px;
+  --scroll-width: 0px;
+
   animation: background-pan 10s linear infinite;
   background: linear-gradient( to right, var(--primary), var(--secondary), var(--primary));
   background-size: 200%;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 @keyframes background-pan {
@@ -31,15 +41,36 @@ main {
 }
 
 .main-container {
-  margin: 1em;
+  padding: 1.5em 1em;
 
   display: grid;
   grid-template-areas:
     "a b c"
     "d b e";
-  grid-template-columns: repeat(3,23em);
-  grid-template-rows: repeat(2,23em);
+  grid-auto-columns: 23em;
+  grid-auto-rows: 23em;
   gap: 1.8em; 
+}
+
+@media (max-width: 1212px) {
+  .main-container {
+    grid-template-areas: 
+      "a b"
+      "c b"
+      "d e";
+  }
+}
+
+@media (max-width: 785px) {
+  .main-container {
+    grid-template-areas: 
+      "a"
+      "b"
+      "c"
+      "c"
+      "d"
+      "e";
+  }
 }
 
 .block {
