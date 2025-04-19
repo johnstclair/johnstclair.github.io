@@ -1,25 +1,34 @@
 :root {
   --primary: #649173;
   --secondary: #dbd5aa;
+  --secondary: #fcfccc;
 
   --dark-bg: #1C1C1C;
-  --dark-fg: #e7e7e7;
+  --dark-fg: #e2e2e2;
   --dark-trans: #8C8C8C;
+  --dark-shadow: #080808;
 
-  --light-bg: #e2e2e2;
-  --light-fg: #1C1C1C;
-  --dark-trans: #b5b5b5;
+  --light-bg: #c1c1c1;
+  --light-fg: #0a0a0a;
+  --light-trans: #b5b5b5;
+  --light-shadow: #cbcbcb;
 
   --bg: var(--dark-bg);
   --fg: var(--dark-fg);
   --trans: var(--dark-trans);
+  --shadow: var(--dark-shadow);
+
+  --alt-bg: var(--light-bg);
+  --alt-fg: var(--light-fg);
+  --alt-trans: var(--light-trans);
+  --alt-shadow: var(--light-shadow);
 
   --trans-one: 70%;
   --trans-two: 50%;
   --trans-three: 30%;
+  --trans-four: 15%;
 
-  --tile-color: var(--bg);
-
+  --invert-amount: .75;
   --scroll-height: 0px;
   --scroll-width: 0px;
 
@@ -83,13 +92,14 @@ main {
 
 .hoverable {
   /* background-color: rgb(112 112 112 / 20%); */
-  background-color: var(--trans) / var(--trans-two);
+  background-color: rgb(from var(--trans) r g b) / var(--trans-two);
   backdrop-filter: blur(8px);
+  transition: 1s;
 }
 
 .hoverable:hover {
   /* background-color: rgb(92 92 92 / 70%); */
-  backdrop-filter: blur(6px) invert(75%);
+  backdrop-filter: blur(10px);
 }
 
 .nav-buttons-container {
@@ -116,7 +126,8 @@ main {
 }
 
 .nav-buttons-container button {
-  background-color: rgb(112 112 112 / 50%);
+  background-color:  color-mix(in srgb, var(--bg) var(--trans-three), var(--alt-fg) var(--trans-three));
+  color: var(--alt-bg);
 
   padding: 1em;
   border-radius: 2em;
@@ -127,15 +138,16 @@ main {
 }
 
 .nav-buttons-container button.active {
-  background-color: rgb(212 212 212 / 70%);
-  color: var(--dark-bg);
+  background-color: rgb(from var(--secondary) r g b / var(--trans-two));
 }
 
-.nav-buttons-container button:active {
-  background-color: rgb(180 180 180 / 65%);
-  scale: 1.1;
-}
-
+.nav-buttons-container button.active:hover,
 .nav-buttons-container button:hover {
-  background-color: rgb(92 92 92 / 70%);
+  background-color: rgb(from var(--secondary) r g b / var(--trans-one));
+}
+
+.nav-buttons-container button.active:active,
+.nav-buttons-container button:active {
+  background-color: rgb(from var(--primary) r g b / var(--trans-one));
+  scale: 1.1;
 }

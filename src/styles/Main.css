@@ -35,16 +35,17 @@
   padding: 1em;
   border-radius: 2em;
 
-  transition: .4s;
+  transition: 
+    all .4s,
+    box-shadow 2s;
 
   color: var(--fg);
 
-  box-shadow: 0 0 1em #080808;
+  box-shadow: 0 0 1em var(--shadow);
 }
 
 .block:hover {
-  color: var(--bg);
-  box-shadow: 0 0 1em #F8F8F8;
+  /* color: var(--bg); */
 }
 
 .project-block {
@@ -65,12 +66,8 @@
 }
 
 .logo-block img {
-
-  pointer-events: auto;
-}
-
-.logo-block img:hover {
-  filter: invert(100%);
+  transition: 1s;
+  filter: invert(var(--invert-amount));
 }
 
 .technologies-block {
@@ -90,9 +87,18 @@
   padding: 1em;
   border-radius: 1.5em;
 
-  width: 250%;
+  width: 75%;
 
-  background-color: rgb(152 152 152 / 10%);
+  transition: 
+    background-color 2s;
+
+  background-color:  color-mix(in srgb, var(--bg) var(--trans-three), var(--alt-fg) var(--trans-four));
+}
+
+@supports (-moz-appearance: none) {
+  .tech-stack-img {
+    width: 250%;
+  }
 }
 
 .small-links-block {

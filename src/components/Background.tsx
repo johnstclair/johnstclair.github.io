@@ -94,7 +94,7 @@ function Background({ children }: props ) {
       if (effectRunner != 0) {
         setEffectRunner(effectRunner-1);
       }
-    }, 125);
+    }, 250);
   }, [effectRunner])
 
   useEffect(() => {
@@ -104,7 +104,6 @@ function Background({ children }: props ) {
     })
     if (output.length > 0) {
       if (!allTheSame(output)) {
-        console.log(output)
         setTimeout(() => {
           for (let i = 0; i < output.length; i++) {
             for (let j = 0; j < output[i].length; j++) {
@@ -138,10 +137,23 @@ function Background({ children }: props ) {
                 onClick={() => {
                   // TODO: currently NEED to hardcode the val of the dark bg, fix this
                   const polarity: string = window.getComputedStyle(document.body).getPropertyValue('--bg') == "#1C1C1C" ? "light" : "dark";
+                  const altPolarity: string = window.getComputedStyle(document.body).getPropertyValue('--bg') == "#1C1C1C" ? "dark" : "light";
+
+                  if (polarity == 'dark') {
+                    document.documentElement.style.setProperty('--invert-amount', ".15");
+                  } else {
+                    document.documentElement.style.setProperty('--invert-amount', ".85");
+                  }
 
                   document.documentElement.style.setProperty('--bg', `var(--${polarity}-bg)`);
                   document.documentElement.style.setProperty('--fg', `var(--${polarity}-fg)`);
                   document.documentElement.style.setProperty('--trans', `var(--${polarity}-trans)`);
+                  document.documentElement.style.setProperty('--shadow', `var(--${polarity}-shadow)`);
+
+                  document.documentElement.style.setProperty('--alt-bg', `var(--${altPolarity}-bg)`);
+                  document.documentElement.style.setProperty('--alt-fg', `var(--${altPolarity}-fg)`);
+                  document.documentElement.style.setProperty('--alt-trans', `var(--${altPolarity}-trans)`);
+                  document.documentElement.style.setProperty('--alt-shadow', `var(--${altPolarity}-shadow)`);
 
                   setTilePolarity(!tilePolarity)
                   setUpdate(update+1)
