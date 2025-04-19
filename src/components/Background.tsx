@@ -7,11 +7,19 @@ interface props {
   children: JSX.Element,
 }
 
-function useWindowSize() {
+function useWindowSize(setDarkTiles) {
   const [size, setSize] = useState([0, 0]);
   useLayoutEffect(() => {
     function updateSize() {
       setSize([window.innerWidth, window.innerHeight]);
+      const output = [];
+      for (let i = 0; i < Math.floor(document.body.scrollHeight / 100); i++) {
+        output.push([])
+        for (let j = 0; j < Math.floor(document.body.scrollWidth / 100); j++) {
+          output[i].push({dark: true, updated: false});
+        }
+      }
+      setDarkTiles(output)
     }
     window.addEventListener('resize', updateSize);
     updateSize();
@@ -62,7 +70,7 @@ function Background({ children }: props ) {
 
   const [update, setUpdate] = useState<number>(0);
 
-  useWindowSize()
+  useWindowSize(setDarkTiles)
 
   document.documentElement.style.setProperty('--background-cols', `${Math.floor(document.body.scrollWidth / 100)}`);
   document.documentElement.style.setProperty('--background-rows', `${Math.floor(document.body.scrollHeight / 100)}`);
@@ -96,11 +104,11 @@ function Background({ children }: props ) {
     })
     if (output.length > 0) {
       if (!allTheSame(output)) {
+        console.log(output)
         setTimeout(() => {
           for (let i = 0; i < output.length; i++) {
             for (let j = 0; j < output[i].length; j++) {
               if (!output[i][j].updated && output[i][j].dark == tilePolarity) {
-                console.log(`dark: ${tilePolarity} | `)
                 if (checkSafety(output,i-1,j)) {if (output[i-1][j].dark != tilePolarity) {output[i-1][j] = {dark: tilePolarity, updated: true}}}
                 if (checkSafety(output,i+1,j)) {if (output[i+1][j].dark != tilePolarity) {output[i+1][j] = {dark: tilePolarity, updated: true}}}
                 if (checkSafety(output,i,j-1)) {if (output[i][j-1].dark != tilePolarity) {output[i][j-1] = {dark: tilePolarity, updated: true}}}
