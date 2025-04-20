@@ -28,7 +28,7 @@
   --trans-three: 30%;
   --trans-four: 15%;
 
-  --invert-amount: .75;
+  --invert-amount: .15;
   --scroll-height: 0px;
   --scroll-width: 0px;
 
@@ -56,6 +56,8 @@
 .block,
 .nav-buttons-container,
 .tech-stack-imgs img,
+.small-links-block div,
+.small-links-block a,
 button {
   pointer-events: auto;
 }

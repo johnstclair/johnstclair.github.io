@@ -5,19 +5,37 @@
   "technologies-icons": [
     {
       "name": "rust",
-      "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg"
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg"
     },
     {
       "name": "typescript",
-      "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
     },
     {
       "name": "tauri",
-      "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tauri/tauri-original.svg"
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tauri/tauri-original.svg"
     },
     {
       "name": "reactjs",
-      "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+    }
+  ],
+  "links": [
+    {
+      "icon": "fa-brands fa-github",
+      "url": "https://github.com/johnstclair"
+    },
+    {
+      "icon": "",
+      "url": ""
+    },
+    {
+      "icon": "",
+      "url": ""
+    },
+    {
+      "icon": "fa-brands fa-linkedin",
+      "url": "https://github.com/johnstclair"
     }
   ]
 }

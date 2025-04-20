@@ -36,7 +36,7 @@
   border-radius: 2em;
 
   transition: 
-    all .4s,
+    all 400ms,
     box-shadow 2s;
 
   color: var(--fg);
@@ -103,5 +103,41 @@
 
 .small-links-block {
   grid-area: e;
+
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+  grid-template-columns: 40% 40%;
+  gap: 10%;
 }
 
+.small-links-block div {
+  background-color:  color-mix(in srgb, var(--bg) var(--trans-three), var(--alt-fg) var(--trans-four));
+
+  border-radius: .25em;
+  padding: .15em;
+
+  font-size: 5em;
+
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+  transition: 
+    all 150ms,
+    background-color 1s;
+}
+
+.small-links-block .empty {
+  background-color: transparent;
+}
+
+.small-links-block a {
+  color: var(--fg);
+  transition: 1s;
+}
+
+.small-links-block div:hover {
+  scale: 1.1;
+}

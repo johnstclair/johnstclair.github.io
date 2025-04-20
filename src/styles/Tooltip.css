@@ -1,7 +1,7 @@
 /* Custom properties */
 :root {
-  --tooltip-text-color: var(--dark-fg);
-  --tooltip-background-color: var(--transparent);
+  --tooltip-text-color: var(--fg);
+  --tooltip-background-color: color-mix(in srgb, var(--bg) var(--trans-two), var(--alt-fg) var(--trans-three));
   --tooltip-margin: 30px;
   --tooltip-arrow-size: 0px;
 }

@@ -6,11 +6,13 @@ import Main from "./components/pages/Main"
 
 import './App.css'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHouse } from '@fortawesome/free-solid-svg-icons'
-import { faCode } from '@fortawesome/free-solid-svg-icons'
-import { faLayerGroup } from '@fortawesome/free-solid-svg-icons'
 
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+
+library.add(fas, fab)
 
 function App() {
   const pages = [<Main />,<></>]
@@ -35,9 +37,9 @@ function App() {
             {pages[page]}
         </motion.div>
         <motion.div className="nav-buttons-container hoverable">
-          <button className={page == 0 ? "active" : ""} onClick={() => setPage(0)}><FontAwesomeIcon icon={faHouse} /></button>
-          <button className={page == 1 ? "active" : ""} onClick={() => setPage(1)}><FontAwesomeIcon icon={faCode} /></button>
-          <button className={page == 2 ? "active" : ""} onClick={() => setPage(2)}><FontAwesomeIcon icon={faLayerGroup} /></button>
+          <button className={page == 0 ? "active" : ""} onClick={() => setPage(0)}><FontAwesomeIcon icon="fa-house" /></button>
+          <button className={page == 1 ? "active" : ""} onClick={() => setPage(1)}><FontAwesomeIcon icon="fa-code" /></button>
+          <button className={page == 2 ? "active" : ""} onClick={() => setPage(2)}><FontAwesomeIcon icon="fa-layer-group" /></button>
         </motion.div>
       </div>
     </Background>

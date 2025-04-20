@@ -64,7 +64,7 @@ interface tile {
 }
 
 function Background({ children }: props ) {
-  const [effectRunner, setEffectRunner] = useState<number>(3);
+  const [effectRunner, setEffectRunner] = useState<number>(1);
   const [darkTiles, setDarkTiles] = useState<tile[][]>([]);
   const [tilePolarity, setTilePolarity] = useState<boolean>(true);
 
@@ -94,7 +94,7 @@ function Background({ children }: props ) {
       if (effectRunner != 0) {
         setEffectRunner(effectRunner-1);
       }
-    }, 250);
+    }, 750);
   }, [effectRunner])
 
   useEffect(() => {
