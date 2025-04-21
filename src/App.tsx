@@ -3,6 +3,7 @@ import { useState } from "react"
 
 import Background from './components/Background'
 import Main from "./components/pages/Main"
+import Projects from "./components/pages/Projects"
 
 import './App.css'
 
@@ -15,7 +16,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 library.add(fas, fab)
 
 function App() {
-  const pages = [<Main />,<></>]
+  const pages = [<Main />,<Projects />]
   const [page, setPage] = useState<number>(0);
 
   return (

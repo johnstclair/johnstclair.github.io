@@ -79,6 +79,10 @@ function Background({ children }: props ) {
   document.documentElement.style.setProperty('--scroll-height', `${document.body.scrollHeight}px`);
 
   useEffect(() => {
+    document.documentElement.style.setProperty('--scrollable-height', `${document.body.scrollHeight}px`);
+  }, [document.body.scrollHeight])
+
+  useEffect(() => {
     setTimeout(() => {
       window.dispatchEvent(new Event('resize'));
 

@@ -31,6 +31,7 @@
   --invert-amount: .15;
   --scroll-height: 0px;
   --scroll-width: 0px;
+  --scrollable-height: 69.6em;
 
   animation: background-pan 10s linear infinite;
   background: linear-gradient( to right, var(--primary), var(--secondary), var(--primary));
@@ -53,11 +54,21 @@
   pointer-events: none;
 }
 
+html, 
+body {
+  height: 100%;
+  margin: 0;
+}
+
 .block,
 .nav-buttons-container,
-.tech-stack-imgs img,
+.hoverable,
+img,
 .small-links-block div,
 .small-links-block a,
+.project,
+.project a,
+.projects-wrapper,
 button {
   pointer-events: auto;
 }

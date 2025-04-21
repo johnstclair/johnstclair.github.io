@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
 import { motion } from "motion/react";
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import "../../styles/Main.css";
@@ -9,26 +7,37 @@ import logo from "../../assets/logo.png";
 import information from "../../assets/information.json"
 
 import Tech from "../Tech";
+import Project from "../Project";
+
+const load = {
+  initial: {
+    scale: ".9",
+  },
+  animate: {
+    scale: "1",
+    transition: {
+    }
+  }
+};
 
 function Main() {
-  const load= {
-    initial: {
-      scale: ".9",
-    },
-    animate: {
-      scale: "1",
-      transition: {
-      }
-    }
-  };
+  let featProject = information["projects"][information["featProject"]];
+  featProject = {name: featProject.name, description: "", image: featProject.image, links: [], technologies: []};
 
   return (<>
     <motion.div 
       variants={load}
       animate="animate"
       initial="initial"
+      style={{
+        display: "grid",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
       className="project-block block hoverable">
-      project
+      <a href={information["projects"][information["featProject"]].links[0].url}>
+        <Project information={featProject} />
+      </a>
     </motion.div>
     <motion.div 
       variants={load}

@@ -35,7 +35,45 @@
     },
     {
       "icon": "fa-brands fa-linkedin",
-      "url": "https://github.com/johnstclair"
+      "url": "https://linkedin/in/john-st-clair-a21b6031a"
+    }
+  ],
+  "featProject": 0,
+  "projects": [
+    {
+      "name": "Artificial Connections",
+      "description": "A full stack app I built with Tauri, Artificial Connections is a lot like New York Times Connections, but with an AI twist.",
+      "image": "artificial_connections.png",
+      "links": [
+        {
+          "name": "github",
+          "icon": "fa-brands fa-github",
+          "url": "https://github.com/johnstclair/artificial-connections"
+        },
+        {
+          "name": "download",
+          "icon": "fa-solid fa-download",
+          "url": "https://github.com/johnstclair/artificial-connections/releases/tag/release"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "rust",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg"
+        },
+        {
+          "name": "typescript",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+        },
+        {
+          "name": "tauri",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tauri/tauri-original.svg"
+        },
+        {
+          "name": "reactjs",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+        }
+      ]
     }
   ]
 }
