@@ -1,0 +1,63 @@
+.skills {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  padding: 1.5em;
+  width: 69.6em;
+  height: 44.8em;
+
+  border-radius: 2em;
+
+  box-shadow: 0 0 1em var(--shadow);
+}
+
+.skills-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2em 4.5em;
+
+  max-height: 100%;
+  width: 100%;
+  border-radius: 1.5em;
+
+  overflow: hidden;
+  overflow-y: scroll;
+
+  font-size: 1.1em;
+}
+
+@media (max-width: 1212px) {
+  .skills {
+    width: 44.8em;
+    height: 69.6em;
+  }
+  .skills-wrapper {
+    grid-template-columns: repeat(2,1fr);
+    gap: 2em 5em;
+  }
+}
+
+@media (max-width: 785px) {
+  .skills {
+    width: 20em;
+    height: calc(var(--scrollable-height) - 88em);
+  }
+  .skills-wrapper {
+    grid-template-columns: repeat(1,1fr);
+    gap: 2em 5em;
+  }
+}
+
+.skills-wrapper h1 {
+  font-size: 1.5em;
+  display: inline-block;
+  margin-right: .6em;
+}
+
+.skills-wrapper p {
+  font-size: 1em;
+  display: inline-block;
+}

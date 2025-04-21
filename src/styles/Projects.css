@@ -69,6 +69,8 @@
   position: relative;
 
   color: var(--fg);
+
+  transition: 1s;
 }
 
 .project * {

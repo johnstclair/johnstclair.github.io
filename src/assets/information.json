@@ -156,7 +156,7 @@
       ],
       "technologies": [
         {
-          "name": "nix",
+          "name": "nixos",
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nixos/nixos-original.svg"
         }
       ]
@@ -226,6 +226,38 @@
         }
       ],
       "technologies": [
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "header": "Languages and Frameworks",
+      "description": "These are languages, frameworks, and other technologies I use frequently and am proficient in.",
+      "items" : [
+        {
+          "name": "rust",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg"
+        }
+      ]
+    },
+    {
+      "header": "Applications, CLI's and other programs",
+      "description": "Tools I daily.",
+      "items" : [
+        {
+          "name": "nixos",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nixos/nixos-original.svg"
+        }
+      ]
+    },
+    {
+      "header": "Old Skills",
+      "description": "Here are tools which I used to use, but haven't maintained my skill in, I'll probably pick them up quickly, but I'm not currently proficient in these.",
+      "items" : [
+        {
+          "name": "C",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"
+        }
       ]
     }
   ]

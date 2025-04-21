@@ -17,7 +17,7 @@
   position: absolute;
   border-radius: 4px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(20%);
   padding: 6px;
   color: var(--tooltip-text-color);
   background: var(--tooltip-background-color);
