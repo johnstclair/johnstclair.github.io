@@ -18,6 +18,7 @@ interface iconLinks {
 interface projectInfo {
   name: string,
   description: string,
+  role: string,
   image: string,
   links: iconLinks[],
   technologies: technologies[],
@@ -36,6 +37,7 @@ function Project({ information }: props) {
   return (<div className="project" style={{paddingBottom: bottomPadding}}>
     <h3>{information.name}</h3>
     <img src={`/${information.image}`}/>
+    <p style={{textIndent: 0, margin: ".5em 0 0 .2em"}}>{information.role}</p>
     <p>{information.description}</p>
     <div className="links">
       {information.links.map((v,i) => {

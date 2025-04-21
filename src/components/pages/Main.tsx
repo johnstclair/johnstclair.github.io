@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import "../../styles/Main.css";
 
-import logo from "../../assets/logo.png";
 import information from "../../assets/information.json"
 
 import Tech from "../Tech";
@@ -22,7 +21,7 @@ const load = {
 
 function Main() {
   let featProject = information["projects"][information["featProject"]];
-  featProject = {name: featProject.name, description: "", image: featProject.image, links: [], technologies: []};
+  featProject = {name: featProject.name, description: "", role: "", image: featProject.image, links: [], technologies: []};
 
   return (<>
     <motion.div 
@@ -52,7 +51,7 @@ function Main() {
       animate="animate"
       initial="initial"
       className="logo-block block hoverable">
-      <img src={logo} style={{width: "22em", margin: "-.5em"}}/>
+      <img src={"/logo.png"} style={{width: "22em", margin: "-.5em"}}/>
     </motion.div>
     <motion.div 
       variants={load}
