@@ -1,0 +1,28 @@
+.technologies-block {
+  grid-area: d;
+}
+
+.tech-stack-imgs {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+  grid-template-columns: 35% 35%;
+  gap: 10%;
+}
+
+.tech-stack-img {
+  padding: 1em;
+  border-radius: 1.5em;
+
+  width: 75%;
+
+  transition: 
+    background-color 2s;
+
+  background-color:  color-mix(in srgb, var(--bg) var(--trans-three), var(--alt-fg) var(--trans-four));
+}
+
+.modal {
+  filter:  invert(var(--invert-amount));
+}

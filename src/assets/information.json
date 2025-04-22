@@ -214,6 +214,30 @@
       ]
     },
     {
+      "name": "Built to Scale: Mountains",
+      "description": "With a team of two newcomers to Git and Godot, I was the main developer in Built To Scale: Moutains, a submission to the GMTK2024 Game Jam.",
+      "role": "Lead Developer",
+      "image": "built_to_scale.png",
+      "links": [
+        {
+          "name": "github",
+          "icon": "fa-brands fa-github",
+          "url": "https://github.com/johnstclair/"
+        },
+        {
+          "name": "download",
+          "icon": "fa-solid fa-download",
+          "url": "https://github.com/johnstclair/artificial-connections/releases/tag/release"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "godot",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/godot/godot-original.svg"
+        }
+      ]
+    },
+    {
       "name": "T.A.A.D.D.A CPU",
       "description": "One of my more time consuming projects, I designed a virtual computer with an special ARM-like architecture.",
       "role": "",
@@ -267,13 +291,21 @@
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
         },
         {
+          "name": "npm",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg"
+        },
+        {
+          "name": "javascript",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+        },
+        {
           "name": "python",
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
         }
       ]
     },
     {
-      "header": "Applications, CLI's and other programs",
+      "header": "Applications, CLI's and programs",
       "description": "Tools I daily.",
       "items" : [
         {
@@ -289,8 +321,24 @@
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/neovim/neovim-original.svg"
         },
         {
+          "name": "bash",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-plain.svg"
+        },
+        {
+          "name": "git",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+        },
+        {
+          "name": "github",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+        },
+        {
+          "name": "inkscape",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/inkscape/inkscape-plain.svg"
+        },
+        {
           "name": "firefox",
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firefox/firefox-original.svg"
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firefox/firefox-plain.svg"
         },
         {
           "name": "apple",
@@ -309,6 +357,22 @@
         {
           "name": "csharp",
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
+        },
+        {
+          "name": "express",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
+        },
+        {
+          "name": "mongodb",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
+        },
+        {
+          "name": "debian",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/debian/debian-original.svg"
+        },
+        {
+          "name": "unity",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-plain.svg"
         },
         {
           "name": "arduino",

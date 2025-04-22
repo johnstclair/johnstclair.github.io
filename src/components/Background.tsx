@@ -5,17 +5,18 @@ import "../styles/Background.css"
 
 interface props {
   children: JSX.Element,
+  scrollablePage: boolean,
 }
 
-function useWindowSize(setDarkTiles) {
+function useWindowSize(setDarkTiles, pageDims: [number, number]) {
   const [size, setSize] = useState([0, 0]);
   useLayoutEffect(() => {
     function updateSize() {
       setSize([window.innerWidth, window.innerHeight]);
       const output = [];
-      for (let i = 0; i < Math.floor(document.body.scrollHeight / 100); i++) {
+      for (let i = 0; i < Math.floor(pageDims[1] / 100); i++) {
         output.push([])
-        for (let j = 0; j < Math.floor(document.body.scrollWidth / 100); j++) {
+        for (let j = 0; j < Math.floor(pageDims[0] / 100); j++) {
           output[i].push({dark: true, updated: false});
         }
       }
@@ -63,33 +64,42 @@ interface tile {
   updated: boolean,
 }
 
-function Background({ children }: props ) {
+function Background({ children, scrollablePage }: props ) {
   const [effectRunner, setEffectRunner] = useState<number>(1);
   const [darkTiles, setDarkTiles] = useState<tile[][]>([]);
   const [tilePolarity, setTilePolarity] = useState<boolean>(true);
 
   const [update, setUpdate] = useState<number>(0);
 
-  useWindowSize(setDarkTiles)
+  const pageWidth = scrollablePage ? document.body.scrollWidth : window.innerWidth;
+  const pageHeight = scrollablePage ? document.body.scrollHeight : window.innerHeight;
 
-  document.documentElement.style.setProperty('--background-cols', `${Math.floor(document.body.scrollWidth / 100)}`);
-  document.documentElement.style.setProperty('--background-rows', `${Math.floor(document.body.scrollHeight / 100)}`);
+  useWindowSize(setDarkTiles, [pageWidth, pageHeight])
 
-  document.documentElement.style.setProperty('--scroll-width', `${document.body.scrollWidth}px`);
-  document.documentElement.style.setProperty('--scroll-height', `${document.body.scrollHeight}px`);
+  document.documentElement.style.setProperty('--background-cols', `${Math.floor(pageWidth / 100)}`);
+  document.documentElement.style.setProperty('--background-rows', `${Math.floor(pageHeight / 100)}`);
+
+  document.documentElement.style.setProperty('--scroll-width', `${pageWidth}px`);
+  document.documentElement.style.setProperty('--scroll-height', `${pageHeight}px`);
 
   useEffect(() => {
-    document.documentElement.style.setProperty('--scrollable-height', `${document.body.scrollHeight}px`);
-  }, [document.body.scrollHeight])
+    document.documentElement.style.setProperty('--scrollable-height', `${pageHeight}px`);
+    console.log(pageHeight);
+    if (pageHeight == window.innerHeight) {
+      document.documentElement.style.setProperty('--overflow', `hidden`);
+    } else {
+      document.documentElement.style.setProperty('--overflow', `visible`);
+    }
+  }, [pageHeight, scrollablePage])
 
   useEffect(() => {
     setTimeout(() => {
       window.dispatchEvent(new Event('resize'));
 
       const output = [];
-      for (let i = 0; i < Math.floor(document.body.scrollHeight / 100); i++) {
+      for (let i = 0; i < Math.floor(pageHeight / 100); i++) {
         output.push([])
-        for (let j = 0; j < Math.floor(document.body.scrollWidth / 100); j++) {
+        for (let j = 0; j < Math.floor(pageWidth / 100); j++) {
           output[i].push({dark: true, updated: false});
         }
       }
@@ -126,12 +136,13 @@ function Background({ children }: props ) {
     setDarkTiles(output);
   }, [update])
 
+  console.log(`${document.documentElement.style.getPropertyValue('--inverted-invert-amount')} background`);
   return (
     <>
       <div className="background-container">
-        {Array.from({ length: Math.floor(document.body.scrollHeight / 100) }).map((_,r) => {
+        {Array.from({ length: Math.floor(pageHeight / 100) }).map((_,r) => {
           return (<>
-            {Array.from({ length: Math.floor(document.body.scrollWidth / 100) }).map((_,c) => {
+            {Array.from({ length: Math.floor(pageWidth / 100) }).map((_,c) => {
               // checks if the tile is safe (exists), then sets to correct color, if not safe default to polarity mode
               const tileBgColor = checkSafety(darkTiles, r, c) ? darkTiles[r][c].dark ? 'dark' : 'light' : 'var(--bg)';
 
@@ -145,8 +156,10 @@ function Background({ children }: props ) {
 
                   if (polarity == 'dark') {
                     document.documentElement.style.setProperty('--invert-amount', ".15");
+                    document.documentElement.style.setProperty('--inverted-invert-amount', 1);
                   } else {
                     document.documentElement.style.setProperty('--invert-amount', ".85");
+                    document.documentElement.style.setProperty('--inverted-invert-amount', 0);
                   }
 
                   document.documentElement.style.setProperty('--bg', `var(--${polarity}-bg)`);

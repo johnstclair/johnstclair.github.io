@@ -25,11 +25,13 @@ function Skills() {
               <h1>{v.header} - </h1>
               {v.description}
               <br/>
-              {v.items.map((v,i) => {
-                return (
-                  <Tech key={i} name={v.name} url={v.url}/>
-                )
-              })}
+              <div className="skills-container">
+                {v.items.map((v,i) => {
+                  return (
+                    <Tech key={i} name={v.name} url={v.url}/>
+                  )
+                })}
+              </div>
             </div>
           )
         })}

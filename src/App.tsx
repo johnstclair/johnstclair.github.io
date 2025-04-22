@@ -1,5 +1,5 @@
 import { motion } from "motion/react"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import Background from './components/Background'
 import Main from "./components/pages/Main"
@@ -21,7 +21,7 @@ function App() {
   const [page, setPage] = useState<number>(0);
 
   return (
-    <Background>
+    <Background scrollablePage={page == 0}>
       <div className="inner-main-container">
         <motion.div 
           initial = {{

@@ -29,9 +29,11 @@
   --trans-four: 15%;
 
   --invert-amount: .15;
+  --inverted-invert-amount: 0;
   --scroll-height: 0px;
   --scroll-width: 0px;
   --scrollable-height: 69.6em;
+  --overflow: visible;
 
   animation: background-pan 10s linear infinite;
   background: linear-gradient( to right, var(--primary), var(--secondary), var(--primary));
@@ -58,6 +60,7 @@ html,
 body {
   height: 100%;
   margin: 0;
+  overflow: var(--overflow);
 }
 
 .block,

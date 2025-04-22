@@ -33,7 +33,7 @@
 @media (max-width: 1212px) {
   .projects {
     width: 44.8em;
-    height: 69.6em;
+    height: 90vh;
   }
   .projects-wrapper {
     grid-template-columns: repeat(2,1fr);
@@ -44,7 +44,7 @@
 @media (max-width: 785px) {
   .projects {
     width: 20em;
-    height: calc(var(--scrollable-height) - 14em);
+    height: 90vh;
   }
   .projects-wrapper {
     grid-template-columns: repeat(1,1fr);

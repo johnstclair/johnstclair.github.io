@@ -2,6 +2,8 @@ import { motion } from "motion/react";
 
 import Tooltip from "./Tooltip";
 
+import "../styles/Tech.css";
+
 interface props {
   name: string,
   url: string
@@ -20,7 +22,7 @@ function Tech({name, url}: props): JSX.Element {
         }
       }}
       animate={{rotate: "0deg"}}
-      className="tech-stack-img" 
+      className="tech-stack-img modal" 
       src={url} />
   </Tooltip>
   )
