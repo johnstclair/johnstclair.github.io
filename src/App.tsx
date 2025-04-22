@@ -20,6 +20,11 @@ function App() {
   const pages = [<Main />,<Projects />, <Skills />]
   const [page, setPage] = useState<number>(0);
 
+  function updatePage(page: number) {
+    setPage(page);
+    window.scrollTo(0, 0);
+  }
+
   return (
     <Background scrollablePage={page == 0}>
       <div className="inner-main-container">
@@ -39,9 +44,9 @@ function App() {
             {pages[page]}
         </motion.div>
         <motion.div className="nav-buttons-container hoverable">
-          <button className={page == 0 ? "active" : ""} onClick={() => setPage(0)}><FontAwesomeIcon icon={"fa-house" as IconProp} /></button>
-          <button className={page == 1 ? "active" : ""} onClick={() => setPage(1)}><FontAwesomeIcon icon={"fa-code" as IconProp} /></button>
-          <button className={page == 2 ? "active" : ""} onClick={() => setPage(2)}><FontAwesomeIcon icon={"fa-layer-group" as IconProp} /></button>
+          <button className={page == 0 ? "active" : ""} onClick={() => updatePage(0)}><FontAwesomeIcon icon={"fa-house" as IconProp} /></button>
+          <button className={page == 1 ? "active" : ""} onClick={() => updatePage(1)}><FontAwesomeIcon icon={"fa-code" as IconProp} /></button>
+          <button className={page == 2 ? "active" : ""} onClick={() => updatePage(2)}><FontAwesomeIcon icon={"fa-layer-group" as IconProp} /></button>
         </motion.div>
       </div>
     </Background>

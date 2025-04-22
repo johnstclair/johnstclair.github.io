@@ -50,7 +50,7 @@
 
 @media (max-width: 785px) {
   .skills {
-    width: 20em;
+    width: min(75vw,20em);
     height: 90vh;
   }
   .skills-wrapper {
