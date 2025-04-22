@@ -89,7 +89,7 @@ function Background({ children, scrollablePage }: props ) {
       setShowNotif(false);
     }, 10000)
    
-    document.addEventListener('mouseup', () => setShowNotif(false)); 
+    document.addEventListener('mousedown', () => setShowNotif(false)); 
   }, [])
 
   useEffect(() => {
