@@ -23,5 +23,11 @@
   background-color:  color-mix(in srgb, var(--bg) var(--trans-three), var(--alt-fg) var(--trans-four));
 }
 
+@supports (-moz-appearance:none) {
+  .tech-stack-img {
+    width: 250%;
+  }
+}
+
 .modal {
 }

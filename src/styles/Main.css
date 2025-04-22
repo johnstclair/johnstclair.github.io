@@ -68,12 +68,6 @@
   filter: invert(var(--invert-amount));
 }
 
-@-moz-document url-prefix() {
-  .tech-stack-img {
-    width: 200em;
-  }
-}
-
 .small-links-block {
   grid-area: e;
 
