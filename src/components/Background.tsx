@@ -25,6 +25,7 @@ function useWindowSize(setDarkTiles: (item: tile[][]) => void, pageDims: [number
     window.addEventListener('resize', updateSize);
     updateSize();
     return () => window.removeEventListener('resize', updateSize);
+ // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return size;
 }
@@ -119,6 +120,7 @@ function Background({ children, scrollablePage }: props ) {
         setEffectRunner(effectRunner-1);
       }
     }, 750);
+ // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [effectRunner])
 
   useEffect(() => {
@@ -144,6 +146,7 @@ function Background({ children, scrollablePage }: props ) {
       }
     }
     setDarkTiles(output);
+ // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [update])
 
   console.log(`${document.documentElement.style.getPropertyValue('--inverted-invert-amount')} background`);
