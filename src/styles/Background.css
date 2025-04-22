@@ -27,3 +27,27 @@
   transition-duration: 0ms;
   scale: .9;
 }
+
+.background-notif {
+  position: absolute;
+  width: 17em;
+  padding: 1em;
+
+  left: 1em;
+  top: 1em;
+
+  border-radius: 1.5em;
+  box-shadow: 0 0 1em var(--shadow);
+
+  z-index: 100;
+}
+
+.background-notif * {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.background-notif h3 {
+  margin-bottom: .3em;
+  font-size: 1.3em;
+}

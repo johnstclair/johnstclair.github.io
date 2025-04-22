@@ -24,5 +24,4 @@
 }
 
 .modal {
-  filter:  invert(var(--invert-amount));
 }

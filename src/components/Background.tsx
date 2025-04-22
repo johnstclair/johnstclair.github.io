@@ -69,6 +69,8 @@ function Background({ children, scrollablePage }: props ) {
   const [darkTiles, setDarkTiles] = useState<tile[][]>([]);
   const [tilePolarity, setTilePolarity] = useState<boolean>(true);
 
+  const [showNotif, setShowNotif] = useState<boolean>(true);
+
   const [update, setUpdate] = useState<number>(0);
 
   const pageWidth = scrollablePage ? document.body.scrollWidth : window.innerWidth;
@@ -81,6 +83,14 @@ function Background({ children, scrollablePage }: props ) {
 
   document.documentElement.style.setProperty('--scroll-width', `${pageWidth}px`);
   document.documentElement.style.setProperty('--scroll-height', `${pageHeight}px`);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowNotif(false);
+    }, 10000)
+   
+    document.addEventListener('mouseup', () => setShowNotif(false)); 
+  }, [])
 
   useEffect(() => {
     document.documentElement.style.setProperty('--scrollable-height', `${pageHeight}px`);
@@ -139,6 +149,18 @@ function Background({ children, scrollablePage }: props ) {
   console.log(`${document.documentElement.style.getPropertyValue('--inverted-invert-amount')} background`);
   return (
     <>
+      {showNotif ? 
+      <motion.div 
+          initial={{
+            scale: ".8",
+          }}
+          animate={{
+            scale: "1",
+          }}
+          className="background-notif hoverable">
+        <h3>Hey!</h3>
+        <p>You can switch the background color by clicking on any of the tiles!</p>
+      </motion.div> : <></>}
       <div className="background-container">
         {Array.from({ length: Math.floor(pageHeight / 100) }).map((_,r) => {
           return (<>
@@ -156,10 +178,8 @@ function Background({ children, scrollablePage }: props ) {
 
                   if (polarity == 'dark') {
                     document.documentElement.style.setProperty('--invert-amount', ".15");
-                    document.documentElement.style.setProperty('--inverted-invert-amount', 1);
                   } else {
                     document.documentElement.style.setProperty('--invert-amount', ".85");
-                    document.documentElement.style.setProperty('--inverted-invert-amount', 0);
                   }
 
                   document.documentElement.style.setProperty('--bg', `var(--${polarity}-bg)`);

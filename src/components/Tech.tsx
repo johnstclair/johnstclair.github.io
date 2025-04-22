@@ -22,7 +22,7 @@ function Tech({name, url}: props): JSX.Element {
         }
       }}
       animate={{rotate: "0deg"}}
-      className="tech-stack-img modal" 
+      className="tech-stack-img" 
       src={url} />
   </Tooltip>
   )
