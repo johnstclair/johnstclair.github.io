@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 import "../../styles/Main.css";
 
@@ -78,7 +79,7 @@ function Main() {
           return (<>
             <div key={i} className={v.icon == "" ? "empty" : ""}>
               <a href={v.url} target="_blank" rel="noreferrer">
-                <FontAwesomeIcon icon={v.icon} />
+                <FontAwesomeIcon icon={v.icon as IconProp} />
               </a>
             </div>
           </>)

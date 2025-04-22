@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState } from "react";
+import { JSX, useEffect, useLayoutEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 import "../styles/Background.css"
@@ -8,12 +8,12 @@ interface props {
   scrollablePage: boolean,
 }
 
-function useWindowSize(setDarkTiles, pageDims: [number, number]) {
+function useWindowSize(setDarkTiles: (item: tile[][]) => void, pageDims: [number, number]) {
   const [size, setSize] = useState([0, 0]);
   useLayoutEffect(() => {
     function updateSize() {
       setSize([window.innerWidth, window.innerHeight]);
-      const output = [];
+      const output: tile[][] = [];
       for (let i = 0; i < Math.floor(pageDims[1] / 100); i++) {
         output.push([])
         for (let j = 0; j < Math.floor(pageDims[0] / 100); j++) {
@@ -94,7 +94,7 @@ function Background({ children, scrollablePage }: props ) {
 
   useEffect(() => {
     document.documentElement.style.setProperty('--scrollable-height', `${pageHeight}px`);
-    console.log(pageHeight);
+
     if (pageHeight == window.innerHeight) {
       document.documentElement.style.setProperty('--overflow', `hidden`);
     } else {
@@ -106,7 +106,7 @@ function Background({ children, scrollablePage }: props ) {
     setTimeout(() => {
       window.dispatchEvent(new Event('resize'));
 
-      const output = [];
+      const output: tile[][] = [];
       for (let i = 0; i < Math.floor(pageHeight / 100); i++) {
         output.push([])
         for (let j = 0; j < Math.floor(pageWidth / 100); j++) {

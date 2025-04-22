@@ -1,3 +1,4 @@
+import { JSX } from "react";
 import { motion } from "motion/react";
 
 import Tooltip from "./Tooltip";

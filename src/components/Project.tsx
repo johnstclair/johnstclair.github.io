@@ -1,3 +1,4 @@
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import "../styles/Projects.css"
@@ -43,7 +44,7 @@ function Project({ information }: props) {
       {information.links.map((v,i) => {
         return  (
           <a key={i} href={v.url} target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={v.icon} />
+            <FontAwesomeIcon icon={v.icon as IconProp} />
           </a>
         )
       })}
