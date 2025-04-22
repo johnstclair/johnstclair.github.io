@@ -237,6 +237,38 @@
         {
           "name": "rust",
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg"
+        },
+        {
+          "name": "typescript",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+        },
+        {
+          "name": "tauri",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tauri/tauri-original.svg"
+        },
+        {
+          "name": "react",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+        },
+        {
+          "name": "godot",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/godot/godot-original.svg"
+        },
+        {
+          "name": "html5",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+        },
+        {
+          "name": "css3",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+        },
+        {
+          "name": "nodejs",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+        },
+        {
+          "name": "python",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
         }
       ]
     },
@@ -247,6 +279,22 @@
         {
           "name": "nixos",
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nixos/nixos-original.svg"
+        },
+        {
+          "name": "linux",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg"
+        },
+        {
+          "name": "neovim",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/neovim/neovim-original.svg"
+        },
+        {
+          "name": "firefox",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firefox/firefox-original.svg"
+        },
+        {
+          "name": "apple",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apple/apple-original.svg"
         }
       ]
     },
@@ -254,6 +302,18 @@
       "header": "Old Skills",
       "description": "Here are tools which I used to use, but haven't maintained my skill in, I'll probably pick them up quickly, but I'm not currently proficient in these.",
       "items" : [
+        {
+          "name": "electron",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/electron/electron-original.svg"
+        },
+        {
+          "name": "csharp",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
+        },
+        {
+          "name": "arduino",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg"
+        },
         {
           "name": "C",
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"

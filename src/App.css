@@ -119,6 +119,8 @@ main {
   padding: .8em;
   border-radius: 1.5em;
 
+  box-shadow: 0 0 1em var(--shadow);
+
   transition: .5s;
 
   width: 3.5em;

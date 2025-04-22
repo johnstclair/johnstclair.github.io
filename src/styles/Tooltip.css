@@ -16,8 +16,9 @@
 .Tooltip-Tip {
   position: absolute;
   border-radius: 4px;
-  left: 50%;
-  transform: translateX(20%);
+  transform: translate(50%,50%);
+  right: 50%;
+  top: 20%;
   padding: 6px;
   color: var(--tooltip-text-color);
   background: var(--tooltip-background-color);
