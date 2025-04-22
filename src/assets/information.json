@@ -1,6 +1,6 @@
 {
   "about-me-header": "Hi, I'm John",
-  "about-me-content": "I enjoy programming and expanding my knowledge.  In the past I have worked with languages such as Typescript, Rust, Python, C, C# and Java. I have used tools such as Godot, Nix - as well as other distros, Git, Github, and Tauri. I have experience with soldering and I love playing with microcontrollers, I've mainly used Arduinos and Raspberry Pis.",
+  "about-me-content": "I enjoy programming and expanding my knowledge.  In the past I have worked with languages such as Typescript, Rust, Python, C, C# and Java. I have used tools such as Godot, Nix - as well as other distros, Git, Github, and Tauri. I have experience with soldering and I love playing with microcontrollers, I've mainly used Arduino's and Raspberry Pi's.",
   "technologies-header": "My Stack",
   "technologies-icons": [
     {
@@ -186,30 +186,6 @@
         {
           "name": "typescript",
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
-        }
-      ]
-    },
-    {
-      "name": "Built to Scale: Mountains",
-      "description": "With a team of two newcomers to Git and Godot, I was the main developer in Built To Scale: Moutains, a submission to the GMTK2024 Game Jam.",
-      "role": "Lead Developer",
-      "image": "built_to_scale.png",
-      "links": [
-        {
-          "name": "github",
-          "icon": "fa-brands fa-github",
-          "url": "https://github.com/johnstclair/"
-        },
-        {
-          "name": "download",
-          "icon": "fa-solid fa-download",
-          "url": "https://github.com/johnstclair/artificial-connections/releases/tag/release"
-        }
-      ],
-      "technologies": [
-        {
-          "name": "godot",
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/godot/godot-original.svg"
         }
       ]
     },

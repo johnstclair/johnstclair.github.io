@@ -1,11 +1,9 @@
 .main-container {
-  padding: 1.5em 1em;
-
   display: grid;
   grid-template-areas:
     "a b c"
     "d b e";
-  grid-auto-columns: 23em;
+  grid-auto-columns: min(23em,90vw);
   grid-auto-rows: 23em;
   gap: 1.8em; 
 }
@@ -70,9 +68,9 @@
   filter: invert(var(--invert-amount));
 }
 
-@supports (-moz-appearance: none) {
+@-moz-document url-prefix() {
   .tech-stack-img {
-    width: 250%;
+    width: 200em;
   }
 }
 

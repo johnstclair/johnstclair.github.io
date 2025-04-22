@@ -8,7 +8,7 @@ interface props {
   scrollablePage: boolean,
 }
 
-function useWindowSize(setDarkTiles: (item: tile[][]) => void, pageDims: [number, number]) {
+function useWindowSize(setDarkTiles: (item: tile[][]) => void, pageDims: [number, number], tilePolarity: boolean) {
   const [size, setSize] = useState([0, 0]);
   useLayoutEffect(() => {
     function updateSize() {
@@ -17,10 +17,10 @@ function useWindowSize(setDarkTiles: (item: tile[][]) => void, pageDims: [number
       for (let i = 0; i < Math.floor(pageDims[1] / 100); i++) {
         output.push([])
         for (let j = 0; j < Math.floor(pageDims[0] / 100); j++) {
-          output[i].push({dark: true, updated: false});
+          output[i].push({dark: tilePolarity, updated: true});
         }
       }
-      setDarkTiles(output)
+      setDarkTiles(output);
     }
     window.addEventListener('resize', updateSize);
     updateSize();
@@ -66,7 +66,6 @@ interface tile {
 }
 
 function Background({ children, scrollablePage }: props ) {
-  const [effectRunner, setEffectRunner] = useState<number>(1);
   const [darkTiles, setDarkTiles] = useState<tile[][]>([]);
   const [tilePolarity, setTilePolarity] = useState<boolean>(true);
 
@@ -77,21 +76,22 @@ function Background({ children, scrollablePage }: props ) {
   const pageWidth = scrollablePage ? document.body.scrollWidth : window.innerWidth;
   const pageHeight = scrollablePage ? document.body.scrollHeight : window.innerHeight;
 
-  useWindowSize(setDarkTiles, [pageWidth, pageHeight])
+  const updateDarkTiles = (input: tile[][]) => {
+    console.log(`this is update before: ${update}`)
+    setDarkTiles(input);
+    setUpdate(update+1);
+    console.log(`this is update now: ${update}`)
+  }
+
+  console.log(update)
+
+  useWindowSize(updateDarkTiles, [pageWidth, pageHeight], tilePolarity);
 
   document.documentElement.style.setProperty('--background-cols', `${Math.floor(pageWidth / 100)}`);
   document.documentElement.style.setProperty('--background-rows', `${Math.floor(pageHeight / 100)}`);
 
   document.documentElement.style.setProperty('--scroll-width', `${pageWidth}px`);
   document.documentElement.style.setProperty('--scroll-height', `${pageHeight}px`);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setShowNotif(false);
-    }, 10000)
-   
-    document.addEventListener('mousedown', () => setShowNotif(false)); 
-  }, [])
 
   useEffect(() => {
     document.documentElement.style.setProperty('--scrollable-height', `${pageHeight}px`);
@@ -115,15 +115,18 @@ function Background({ children, scrollablePage }: props ) {
         }
       }
       setDarkTiles(output)
-
-      if (effectRunner != 0) {
-        setEffectRunner(effectRunner-1);
-      }
     }, 750);
+
+    setTimeout(() => {
+      setShowNotif(false);
+    }, 10000)
+   
+    document.addEventListener('mousedown', () => setShowNotif(false)); 
  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [effectRunner])
+  }, [])
 
   useEffect(() => {
+    console.log("real update")
     const output = darkTiles
     output.flat().map(v => {
       v.updated = false;
@@ -142,14 +145,13 @@ function Background({ children, scrollablePage }: props ) {
             }
           }
         setUpdate(update+1)
-        }, 25);
+        }, 30);
       }
     }
     setDarkTiles(output);
  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [update])
 
-  console.log(`${document.documentElement.style.getPropertyValue('--inverted-invert-amount')} background`);
   return (
     <>
       {showNotif ? 

@@ -71,6 +71,7 @@ img,
 .project,
 .project a,
 .projects-wrapper,
+.skills-wrapper,
 button {
   pointer-events: auto;
 }
@@ -103,6 +104,8 @@ main {
   display: flex;
   align-items: center;
   place-items: center;
+
+  padding-top: clamp(.5vh,2.5vh,2.5vh);
 }
 
 .hoverable {
@@ -118,6 +121,7 @@ main {
 }
 
 .nav-buttons-container {
+  margin-left: 1em;
   padding: .8em;
   border-radius: 1.5em;
 
