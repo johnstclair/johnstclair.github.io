@@ -1,6 +1,40 @@
 {
   "about-me-header": "Hi, I'm John",
-  "about-me-content": "I enjoy programming and expanding my knowledge.  In the past I have worked with languages such as Typescript, Rust, Python, C, C# and Java. I have used tools such as Godot, Nix - as well as other distros, Git, Github, and Tauri. I have experience with soldering and I love playing with microcontrollers, I've mainly used Arduino's and Raspberry Pi's.",
+  "about-me-content": "I focus on full stack and game programming. I'm always learning and exploring new tools and technologies — check out below for more.",
+  "about-me-json": [
+    {
+      "key": "name",
+      "value": "John St. Clair"
+    },
+    {
+      "key": "ghUsername",
+      "value": "johnstclair"
+    },
+    {
+      "key": "learning",
+      "value": "[\"nix\", \"lambda calculus\"]"
+    },
+    {
+      "key": "organizations",
+      "value": "[\"stlrapp\"]"
+    },
+    {
+      "key": "os",
+      "value": "NixOS + macOS (laptop)"
+    },
+    {
+      "key": "editor",
+      "value": "neovim"
+    },
+    {
+      "key": "favoriteManifesto",
+      "value": "The Cult of Done"
+    },
+    {
+      "key": "lastUpdated",
+      "value": "1745359401"
+    }
+  ],
   "technologies-header": "My Stack",
   "technologies-icons": [
     {
@@ -317,7 +351,7 @@
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firefox/firefox-plain.svg"
         },
         {
-          "name": "apple",
+          "name": "macos",
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apple/apple-original.svg"
         }
       ]
@@ -333,6 +367,10 @@
         {
           "name": "csharp",
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
+        },
+        {
+          "name": "raspberrypi",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/raspberrypi/raspberrypi-original.svg"
         },
         {
           "name": "express",

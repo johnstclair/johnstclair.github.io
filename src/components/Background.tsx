@@ -12,7 +12,7 @@ function useWindowSize(setDarkTiles: (item: tile[][]) => void, pageDims: [number
   const [size, setSize] = useState([0, 0]);
   useLayoutEffect(() => {
     function updateSize() {
-      setSize([window.innerWidth, window.innerHeight]);
+      setSize([pageDims[0], pageDims[1]]);
       const output: tile[][] = [];
       for (let i = 0; i < Math.floor(pageDims[1] / 100); i++) {
         output.push([])

@@ -108,3 +108,20 @@
 .small-links-block div:hover {
   scale: 1.1;
 }
+
+.about-me-json {
+  text-indent: 0;
+  background-color:  color-mix(in srgb, var(--bg) var(--trans-three), var(--alt-fg) var(--trans-four));
+
+  border-radius: .3em;
+  padding: .5em;
+  margin: 0 -.5em 0 -.5em;
+}
+
+.key {
+  color: #83A598;
+}
+
+.value {
+  color: #B9BB25;
+}

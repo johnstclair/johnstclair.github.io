@@ -46,6 +46,16 @@ function Main() {
       className="about-me-block block hoverable">
       <h1>{information["about-me-header"]}</h1>
       <p>{information["about-me-content"]}</p>
+      <p className="about-me-json">
+        {information["about-me-json"].map((v,i) => {
+          const quotes = !v.value.includes("\"") ? "\"" : "";
+          return (<>
+            <span className="key">"{v.key}": </span>
+            <span className="value">{quotes}{v.value}{quotes}</span>
+            <br />
+          </>)
+        })}
+      </p>
     </motion.div>
     <motion.div 
       variants={load}
