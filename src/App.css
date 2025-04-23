@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
   --primary: #649173;
   --secondary: #dbd5aa;
@@ -38,6 +40,9 @@
   background: linear-gradient( to right, var(--primary), var(--secondary), var(--primary));
   background-size: 200%;
 
+  font-family: 'Jetbrains Mono', Mono;
+  color: (--fg);
+
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -49,6 +54,11 @@
   to {
     background-position: -200% center;
   }
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat';
+  font-weight: 800;
 }
 
 * {

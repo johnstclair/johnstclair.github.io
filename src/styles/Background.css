@@ -29,7 +29,7 @@
 }
 
 .background-notif {
-  position: absolute;
+  position: fixed;
   width: 17em;
   padding: 1em;
 
