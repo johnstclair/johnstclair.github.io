@@ -47,7 +47,7 @@ function Main() {
       <h1>{information["about-me-header"]}</h1>
       <p>{information["about-me-content"]}</p>
       <p className="about-me-json">
-        {information["about-me-json"].map((v,i) => {
+        {information["about-me-json"].map((v) => {
           const quotes = !v.value.includes("\"") ? "\"" : "";
           return (<>
             <span className="key">"{v.key}": </span>

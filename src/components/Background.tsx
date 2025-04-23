@@ -73,17 +73,14 @@ function Background({ children, scrollablePage }: props ) {
 
   const [update, setUpdate] = useState<number>(0);
 
+  
   const pageWidth = scrollablePage ? document.body.scrollWidth : window.innerWidth;
   const pageHeight = scrollablePage ? document.body.scrollHeight : window.innerHeight;
 
   const updateDarkTiles = (input: tile[][]) => {
-    console.log(`this is update before: ${update}`)
     setDarkTiles(input);
     setUpdate(update+1);
-    console.log(`this is update now: ${update}`)
   }
-
-  console.log(update)
 
   useWindowSize(updateDarkTiles, [pageWidth, pageHeight], tilePolarity);
 
@@ -106,12 +103,14 @@ function Background({ children, scrollablePage }: props ) {
   useEffect(() => {
     setTimeout(() => {
       window.dispatchEvent(new Event('resize'));
+      const pWidth = scrollablePage ? document.body.scrollWidth : window.innerWidth;
+      const pHeight = scrollablePage ? document.body.scrollHeight : window.innerHeight;
 
       const output: tile[][] = [];
-      for (let i = 0; i < Math.floor(pageHeight / 100); i++) {
+      for (let i = 0; i < Math.floor(pHeight / 100); i++) {
         output.push([])
-        for (let j = 0; j < Math.floor(pageWidth / 100); j++) {
-          output[i].push({dark: true, updated: false});
+        for (let j = 0; j < Math.floor(pWidth / 100); j++) {
+          output[i].push({dark: tilePolarity, updated: false});
         }
       }
       setDarkTiles(output)
@@ -126,7 +125,6 @@ function Background({ children, scrollablePage }: props ) {
   }, [])
 
   useEffect(() => {
-    console.log("real update")
     const output = darkTiles
     output.flat().map(v => {
       v.updated = false;
