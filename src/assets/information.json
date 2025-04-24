@@ -1,6 +1,6 @@
 {
   "about-me-header": "Hi, I'm John",
-  "about-me-content": "I focus on full stack and game programming. I'm always learning and exploring new tools and technologies — check out below for more.",
+  "about-me-content": "I focus on full stack development and game programming. I'm always learning and exploring new tools and technologies — check out below for more.",
   "about-me-json": [
     {
       "key": "name",
@@ -20,7 +20,7 @@
     },
     {
       "key": "os",
-      "value": "NixOS + macOS (laptop)"
+      "value": "NixOS"
     },
     {
       "key": "editor",
@@ -260,6 +260,34 @@
         }
       ],
       "technologies": [
+      ]
+    },
+    {
+      "name": "Personal Portfolio V1",
+      "description": "My old website, created back when I was learning web development, my old portfolio did the job. Now that I've improved, I'm glad I've replaced it",
+      "role": "",
+      "image": "portfolio_v1.png",
+      "links": [
+        {
+          "name": "github",
+          "icon": "fa-brands fa-github",
+          "url": "https://github.com/johnstclair/personal_portfolio_v1"
+        },
+        {
+          "name": "website",
+          "icon": "fa-solid fa-globe",
+          "url": "https://johnstclair.github.io/personal_portfolio_v1"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "javascript",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+        },
+        {
+          "name": "react",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+        }
       ]
     }
   ],

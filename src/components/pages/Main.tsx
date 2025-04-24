@@ -50,8 +50,8 @@ function Main() {
         {information["about-me-json"].map((v) => {
           const quotes = !v.value.includes("\"") ? "\"" : "";
           return (<>
-            <span className="key">"{v.key}": </span>
-            <span className="value">{quotes}{v.value}{quotes}</span>
+            <span className="key">"{v.key}"</span>: 
+            <span className="value"> {quotes}{v.value}{quotes}</span>
             <br />
           </>)
         })}
