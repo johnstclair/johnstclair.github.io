@@ -45,6 +45,7 @@
 .background-notif * {
   margin: 0;
   font-size: 1.1em;
+  color: var(--fg);
 }
 
 .background-notif h3 {
