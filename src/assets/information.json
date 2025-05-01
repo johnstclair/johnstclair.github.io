@@ -230,14 +230,9 @@
       "image": "built_to_scale.png",
       "links": [
         {
-          "name": "github",
-          "icon": "fa-brands fa-github",
-          "url": "https://github.com/johnstclair/"
-        },
-        {
-          "name": "download",
-          "icon": "fa-solid fa-download",
-          "url": "https://github.com/johnstclair/artificial-connections/releases/tag/release"
+          "name": "play",
+          "icon": "fa-solid fa-play",
+          "url": "https://gangagames.itch.io/built-to-scale-mountains"
         }
       ],
       "technologies": [
