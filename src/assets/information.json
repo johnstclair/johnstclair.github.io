@@ -1,10 +1,14 @@
 {
   "about-me-header": "Hi, I'm John",
-  "about-me-content": "I focus on full stack development and game programming. I'm always learning and exploring new tools and technologies — check out below for more.",
+  "about-me-content": "Reading's hard, except for configs",
   "about-me-json": [
     {
       "key": "name",
       "value": "John St. Clair"
+    },
+    {
+      "key": "focus",
+      "value": "Full stack and game development"
     },
     {
       "key": "ghUsername",
@@ -32,7 +36,7 @@
     },
     {
       "key": "lastUpdated",
-      "value": "1745359401"
+      "value": "1746585861"
     }
   ],
   "technologies-header": "My Stack",
@@ -289,7 +293,7 @@
   "skills": [
     {
       "header": "Languages and Frameworks",
-      "description": "These are languages, frameworks, and other technologies I use frequently and am proficient in.",
+      "description": "Languages, frameworks, and other technologies",
       "items" : [
         {
           "name": "rust",
@@ -339,7 +343,7 @@
     },
     {
       "header": "Applications, CLI's and programs",
-      "description": "Tools I daily.",
+      "description": "Tools I daily",
       "items" : [
         {
           "name": "nixos",
@@ -381,7 +385,7 @@
     },
     {
       "header": "Old Skills",
-      "description": "Here are tools which I used to use, but haven't maintained my skill in, I'll probably pick them up quickly, but I'm not currently proficient in these.",
+      "description": "Previously used tools",
       "items" : [
         {
           "name": "electron",
