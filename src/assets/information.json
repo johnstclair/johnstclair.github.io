@@ -134,6 +134,25 @@
       ]
     },
     {
+      "name": "Vocal Mouse",
+      "description": "Vocal Mouse is a Rust CLI program I created which allows the user to move their mouse through notes picked up by the microphone.",
+      "role": "",
+      "image": "vocal_mouse_icon.png",
+      "links": [
+        {
+          "name": "github",
+          "icon": "fa-brands fa-github",
+          "url": "https://github.com/johnstclair/vocal_mouse"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "rust",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg"
+        }
+      ]
+    },
+    {
       "name": "lfisiks",
       "description": "lfisiks is a little pixel physics demo built with minifb in Rust. I made the project over a couple of days, and released it as a reference for other deveolpers.",
       "role": "",
