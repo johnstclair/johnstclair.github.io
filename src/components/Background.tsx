@@ -146,7 +146,7 @@ function Background({ children, scrollablePage }: props ) {
             }
           }
         setUpdate(update+1)
-        }, 30);
+        }, 45);
       }
     }
     setDarkTiles(output);
