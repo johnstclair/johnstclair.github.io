@@ -16,7 +16,7 @@
     },
     {
       "key": "learning",
-      "value": "[\"nix\", \"lambda calculus\"]"
+      "value": "[\"nix\", \"os dev\"]"
     },
     {
       "key": "organizations",
@@ -36,7 +36,7 @@
     },
     {
       "key": "lastUpdated",
-      "value": "1746585861"
+      "value": "1762256943"
     }
   ],
   "technologies-header": "My Stack",
@@ -116,7 +116,7 @@
     },
     {
       "name": "Anzz",
-      "description": "Anzz is a fun little project I worked on for school to learn Godot Mono (C#). It's a simulation where ants utilize pheromones to gather food as efficiently as possible.",
+      "description": "Anzz is a fun little project I worked on for school to learn Godot Mono. It's a simulation where ants use pheromones to gather food as efficiently as possible.",
       "role": "",
       "image": "anzz.png",
       "links": [
@@ -134,8 +134,23 @@
       ]
     },
     {
+      "name": "T.A.A.D.D.A CPU",
+      "description": "One of my more time consuming projects, I designed a virtual computer with an special ARM-like architecture.",
+      "role": "",
+      "image": "taadda.svg",
+      "links": [
+        {
+          "name": "github",
+          "icon": "fa-brands fa-github",
+          "url": "https://github.com/johnstclair/TAADDA_CPU"
+        }
+      ],
+      "technologies": [
+      ]
+    },
+    {
       "name": "Vocal Mouse",
-      "description": "Vocal Mouse is a Rust CLI program I created which allows the user to move their mouse through notes picked up by the microphone.",
+      "description": "Vocal Mouse is a Rust CLI I created that allows the user to control their mouse through notes detected by the microphone.",
       "role": "",
       "image": "vocal_mouse_icon.png",
       "links": [
@@ -172,6 +187,44 @@
       ]
     },
     {
+      "name": "Built to Scale: Mountains",
+      "description": "Teaming up with my friends for art and level design, I was the main developer in Built To Scale: Moutains, a submission to the GMTK2024 Game Jam.",
+      "role": "Lead Developer",
+      "image": "built_to_scale.png",
+      "links": [
+        {
+          "name": "play",
+          "icon": "fa-solid fa-play",
+          "url": "https://gangagames.itch.io/built-to-scale-mountains"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "godot",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/godot/godot-original.svg"
+        }
+      ]
+    },
+    {
+      "name": "NixOS Config",
+      "description": "My NixOS configuration, designed from the ground up to be modular, maintainable, reproducable, and stunning.",
+      "role": "",
+      "image": "nix.png",
+      "links": [
+        {
+          "name": "github",
+          "icon": "fa-brands fa-github",
+          "url": "https://github.com/johnstclair/nixos-config"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "nixos",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nixos/nixos-original.svg"
+        }
+      ]
+    },
+    {
       "name": "Raycast Genius Lyrics",
       "description": "I added a command that allows users to search for song titles using lyrics to the existing Genius Lyric's extension for Raycast",
       "role": "Contributer",
@@ -198,117 +251,8 @@
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
         }
       ]
-    },
-    {
-      "name": "NixOS Config",
-      "description": "My NixOS configuration, designed from the ground up to be modular, maintainable, reproducable, and stunning.",
-      "role": "",
-      "image": "nix.png",
-      "links": [
-        {
-          "name": "github",
-          "icon": "fa-brands fa-github",
-          "url": "https://github.com/johnstclair/nixos-config"
-        }
-      ],
-      "technologies": [
-        {
-          "name": "nixos",
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nixos/nixos-original.svg"
-        }
-      ]
-    },
-    {
-      "name": "Personal Portfolio V2",
-      "description": "This website! I have used my knowledge of Typescript, HTML, CSS, and React to create my personal portfolio, even better than the first.",
-      "role": "",
-      "image": "website.png",
-      "links": [
-        {
-          "name": "github",
-          "icon": "fa-brands fa-github",
-          "url": "https://github.com/johnstclair/johnstclair.github.io"
-        },
-        {
-          "name": "website",
-          "icon": "fa-solid fa-globe",
-          "url": "https://johnstclair.github.io"
-        }
-      ],
-      "technologies": [
-        {
-          "name": "react",
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
-        },
-        {
-          "name": "typescript",
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
-        }
-      ]
-    },
-    {
-      "name": "Built to Scale: Mountains",
-      "description": "With a team of two newcomers to Git and Godot, I was the main developer in Built To Scale: Moutains, a submission to the GMTK2024 Game Jam.",
-      "role": "Lead Developer",
-      "image": "built_to_scale.png",
-      "links": [
-        {
-          "name": "play",
-          "icon": "fa-solid fa-play",
-          "url": "https://gangagames.itch.io/built-to-scale-mountains"
-        }
-      ],
-      "technologies": [
-        {
-          "name": "godot",
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/godot/godot-original.svg"
-        }
-      ]
-    },
-    {
-      "name": "T.A.A.D.D.A CPU",
-      "description": "One of my more time consuming projects, I designed a virtual computer with an special ARM-like architecture.",
-      "role": "",
-      "image": "taadda.svg",
-      "links": [
-        {
-          "name": "github",
-          "icon": "fa-brands fa-github",
-          "url": "https://github.com/johnstclair/TAADDA_CPU"
-        }
-      ],
-      "technologies": [
-      ]
-    },
-    {
-      "name": "Personal Portfolio V1",
-      "description": "My old website, created back when I was learning web development, my old portfolio did the job. Now that I've improved, I'm glad I've replaced it",
-      "role": "",
-      "image": "portfolio_v1.png",
-      "links": [
-        {
-          "name": "github",
-          "icon": "fa-brands fa-github",
-          "url": "https://github.com/johnstclair/personal_portfolio_v1"
-        },
-        {
-          "name": "website",
-          "icon": "fa-solid fa-globe",
-          "url": "https://johnstclair.github.io/personal_portfolio_v1"
-        }
-      ],
-      "technologies": [
-        {
-          "name": "javascript",
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-        },
-        {
-          "name": "react",
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
-        }
-      ]
     }
-  ],
+     ],
   "skills": [
     {
       "header": "Languages and Frameworks",

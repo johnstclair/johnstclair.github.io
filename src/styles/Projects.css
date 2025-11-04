@@ -84,7 +84,11 @@
 }
 
 .project img {
-  width: 17em;
+  max-width: 17em;
+  max-height: 15em;
+  width: auto;
+  height: auto;
+
   border-radius: 1em;
 }
 
