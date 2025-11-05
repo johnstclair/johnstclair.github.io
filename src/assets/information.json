@@ -115,25 +115,6 @@
       ]
     },
     {
-      "name": "Anzz",
-      "description": "Anzz is a fun little project I worked on for school to learn Godot Mono. It's a simulation where ants use pheromones to gather food as efficiently as possible.",
-      "role": "",
-      "image": "anzz.png",
-      "links": [
-        {
-          "name": "download",
-          "icon": "fa-solid fa-download",
-          "url": "https://gangagames.itch.io/anzz"
-        }
-      ],
-      "technologies": [
-        {
-          "name": "godot",
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/godot/godot-original.svg"
-        }
-      ]
-    },
-    {
       "name": "T.A.A.D.D.A CPU",
       "description": "One of my more time consuming projects, I designed a virtual computer with an special ARM-like architecture.",
       "role": "",
@@ -221,6 +202,25 @@
         {
           "name": "nixos",
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nixos/nixos-original.svg"
+        }
+      ]
+    },
+    {
+      "name": "Anzz",
+      "description": "Anzz is a goofy little project I worked on for school to learn Godot Mono. It's a simulation where ants use pheromones to gather food as efficiently as possible.",
+      "role": "",
+      "image": "anzz.png",
+      "links": [
+        {
+          "name": "download",
+          "icon": "fa-solid fa-download",
+          "url": "https://gangagames.itch.io/anzz"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "godot",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/godot/godot-original.svg"
         }
       ]
     },
