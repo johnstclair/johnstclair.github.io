@@ -14,17 +14,14 @@ function useWindowSize(setDarkTiles: (item: tile[][]) => void, pageDims: [number
     function updateSize() {
       setSize([pageDims[0], pageDims[1]]);
       const output: tile[][] = [];
-      console.log(`${pageDims[0]}`)
       for (let i = 0; i < Math.floor(pageDims[1] / 100); i++) {
         output.push([])
         for (let j = 0; j < Math.floor(pageDims[0] / 100); j++) {
           output[i].push({dark: tilePolarity, updated: true});
         }
       }
-      console.log(output)
       setDarkTiles(output);
     }
-  console.log(`first in func ${pageDims[0]} and ${pageDims[1]}`)
     window.addEventListener('resize', updateSize);
     return () => window.removeEventListener('resize', updateSize);
  // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -82,6 +79,17 @@ function Background({ children, scrollablePage }: props ) {
   const updateDarkTiles = (input: tile[][]) => {
     setDarkTiles(input);
     setUpdate(update+1);
+  }
+
+  if (darkTiles.length != Math.floor(pageHeight / 100) || darkTiles[0].length != Math.floor(pageWidth / 100)) {
+    const output: tile[][] = [];
+    for (let i = 0; i < Math.floor(pageHeight / 100); i++) {
+      output.push([])
+      for (let j = 0; j < Math.floor(pageWidth / 100); j++) {
+        output[i].push({dark: tilePolarity, updated: true});
+      }
+    }
+    setDarkTiles(output);
   }
 
   console.log(`${pageWidth} and ${pageHeight}`)
