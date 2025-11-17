@@ -19,10 +19,6 @@
       "value": "[\"nix\", \"os dev\"]"
     },
     {
-      "key": "organizations",
-      "value": "[\"stlrapp\"]"
-    },
-    {
       "key": "os",
       "value": "NixOS"
     },
