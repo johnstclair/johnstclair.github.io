@@ -145,6 +145,35 @@
       ]
     },
     {
+      "name": "ETSP Launcher",
+      "description": "ETSP Launcher is a pattern-based Termux script launcher for Android.",
+      "role": "",
+      "image": "etsplauncher.webp",
+      "links": [
+        {
+          "name": "github",
+          "icon": "fa-brands fa-github",
+          "url": "https://github.com/johnstclair/etsplauncher"
+        },
+        {
+          "name": "download",
+          "icon": "fa-solid fa-download",
+          "url": "https://github.com/johnstclair/etsplauncher/releases/tag/release"
+        }
+
+      ],
+      "technologies": [
+        {
+          "name": "kotlin",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-plain.svg"
+        },
+        {
+          "name": "android",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-plain.svg"
+        }
+      ]
+    },
+    {
       "name": "lfisiks",
       "description": "lfisiks is a little pixel physics demo built with minifb in Rust. I made the project over a couple of days, and released it as a reference for other deveolpers.",
       "role": "",
@@ -255,6 +284,10 @@
       "description": "Languages, frameworks, and other technologies",
       "items" : [
         {
+          "name": "C",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"
+        },
+        {
           "name": "rust",
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg"
         },
@@ -275,33 +308,13 @@
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/godot/godot-original.svg"
         },
         {
-          "name": "html5",
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
-        },
-        {
-          "name": "css3",
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
-        },
-        {
-          "name": "nodejs",
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
-        },
-        {
-          "name": "npm",
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg"
-        },
-        {
-          "name": "javascript",
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-        },
-        {
           "name": "python",
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
         }
       ]
     },
     {
-      "header": "Applications, CLI's and programs",
+      "header": "Applications, CLI's, and programs",
       "description": "Tools I daily",
       "items" : [
         {
@@ -313,6 +326,10 @@
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg"
         },
         {
+          "name": "emacs",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/emacs/emacs-original.svg"
+        },
+        {
           "name": "neovim",
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/neovim/neovim-original.svg"
         },
@@ -321,24 +338,8 @@
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-plain.svg"
         },
         {
-          "name": "git",
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
-        },
-        {
-          "name": "github",
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
-        },
-        {
           "name": "inkscape",
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/inkscape/inkscape-plain.svg"
-        },
-        {
-          "name": "firefox",
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firefox/firefox-plain.svg"
-        },
-        {
-          "name": "macos",
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apple/apple-original.svg"
         }
       ]
     },
@@ -359,14 +360,6 @@
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/raspberrypi/raspberrypi-original.svg"
         },
         {
-          "name": "express",
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
-        },
-        {
-          "name": "mongodb",
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
-        },
-        {
           "name": "debian",
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/debian/debian-original.svg"
         },
@@ -377,12 +370,7 @@
         {
           "name": "arduino",
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg"
-        },
-        {
-          "name": "C",
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"
-        }
-      ]
+        }      ]
     }
   ]
 }
