@@ -126,6 +126,25 @@
       ]
     },
     {
+      "name": "ULC",
+      "description": "Untyped Lambda Calculus interpreter written in C.",
+      "role": "",
+      "image": "ulc.png",
+      "links": [
+        {
+          "name": "github",
+          "icon": "fa-brands fa-github",
+          "url": "https://github.com/johnstclair/ulc"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "c",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"
+        }
+      ]
+    },
+    {
       "name": "Vocal Mouse",
       "description": "Vocal Mouse is a Rust CLI I created that allows the user to control their mouse through notes detected by the microphone.",
       "role": "",
