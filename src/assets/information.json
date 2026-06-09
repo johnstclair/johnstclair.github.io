@@ -145,6 +145,44 @@
       ]
     },
     {
+      "name": "Labyrinth",
+      "description": "Submission to and a winner of the 2026 Vestibule Game Jam. A game about an architect who travels to Cyprus to a vestibule to the ancient Greek Labyrinth. Written in HolyC for TempleOS.",
+      "role": "",
+      "image": "labyrinth.png",
+      "links": [
+        {
+          "name": "github",
+          "icon": "fa-brands fa-github",
+          "url": "https://github.com/johnstclair/labyrinth"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "holyc",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"
+        }
+      ]
+    },
+    {
+      "name": "Altar",
+      "description": "Altar is a distribution of TempleOS based off of Shrine. Altar includes a collection of my software and modifications to TempleOS.",
+      "role": "",
+      "image": "altar.png",
+      "links": [
+        {
+          "name": "github",
+          "icon": "fa-brands fa-github",
+          "url": "https://github.com/johnstclair/altar"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "holyc",
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"
+        }
+      ]
+    },
+    {
       "name": "Vocal Mouse",
       "description": "Vocal Mouse is a Rust CLI I created that allows the user to control their mouse through notes detected by the microphone.",
       "role": "",
