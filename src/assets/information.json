@@ -8,7 +8,7 @@
     },
     {
       "key": "focus",
-      "value": "Full stack and game development"
+      "value": "Low level and esoteric development"
     },
     {
       "key": "ghUsername",
@@ -32,7 +32,7 @@
     },
     {
       "key": "lastUpdated",
-      "value": "1762256943"
+      "value": "1781655321"
     }
   ],
   "technologies-header": "My Stack",
@@ -76,7 +76,7 @@
   "projects": [
     {
       "name": "Artificial Connections",
-      "description": "A full stack app I built with Tauri, Artificial Connections is a lot like New York Times Connections, but with an AI twist.",
+      "description": "An application built in Tauri, Artificial Connections is a lot like New York Times Connections, but LLM powered features.",
       "role": "",
       "image": "artificial_connections.png",
       "links": [
@@ -112,7 +112,7 @@
     },
     {
       "name": "T.A.A.D.D.A CPU",
-      "description": "One of my more time consuming projects, I designed a virtual computer with an special ARM-like architecture.",
+      "description": "A virtual computer with an special ARM-like architecture.",
       "role": "",
       "image": "taadda.svg",
       "links": [
@@ -146,7 +146,7 @@
     },
     {
       "name": "Labyrinth",
-      "description": "Submission to and a winner of the 2026 Vestibule Game Jam. A game about an architect who travels to Cyprus to a vestibule to the ancient Greek Labyrinth. Written in HolyC for TempleOS.",
+      "description": "Submission to and a winner of the 2026 Vestibule Game Jam. A game about an architect who travels to Cyprus to a build vestibule for the ancient Greek Labyrinth. Written in HolyC for TempleOS.",
       "role": "",
       "image": "labyrinth.png",
       "links": [
@@ -184,7 +184,7 @@
     },
     {
       "name": "Vocal Mouse",
-      "description": "Vocal Mouse is a Rust CLI I created that allows the user to control their mouse through notes detected by the microphone.",
+      "description": "Vocal Mouse is a Rust CLI enabling users to control their cursor through notes detected by the microphone.",
       "role": "",
       "image": "vocal_mouse_icon.png",
       "links": [
@@ -232,7 +232,7 @@
     },
     {
       "name": "lfisiks",
-      "description": "lfisiks is a little pixel physics demo built with minifb in Rust. I made the project over a couple of days, and released it as a reference for other deveolpers.",
+      "description": "lfisiks is a little pixel physics demo built with minifb in Rust. The project was built over a couple of days, and released it as a reference for other deveolpers.",
       "role": "",
       "image": "lfisiks.png",
       "links": [
@@ -251,7 +251,7 @@
     },
     {
       "name": "Built to Scale: Mountains",
-      "description": "Teaming up with my friends for art and level design, I was the main developer in Built To Scale: Moutains, a submission to the GMTK2024 Game Jam.",
+      "description": "I was the main developer in Built To Scale: Moutains, a submission to the GMTK2024 Game Jam.",
       "role": "Lead Developer",
       "image": "built_to_scale.png",
       "links": [
@@ -270,7 +270,7 @@
     },
     {
       "name": "NixOS Config",
-      "description": "My NixOS configuration, designed from the ground up to be modular, maintainable, reproducable, and stunning.",
+      "description": "Personal NixOS configuration, designed to be modular and easy to use simultaneously on multiple devices.",
       "role": "",
       "image": "nix.png",
       "links": [
@@ -289,7 +289,7 @@
     },
     {
       "name": "Anzz",
-      "description": "Anzz is a goofy little project I worked on for school to learn Godot Mono. It's a simulation where ants use pheromones to gather food as efficiently as possible.",
+      "description": "Anzz is a simulation where ants use pheromones to gather food as efficiently as possible.",
       "role": "",
       "image": "anzz.png",
       "links": [
