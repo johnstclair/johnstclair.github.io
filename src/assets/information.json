@@ -76,7 +76,7 @@
   "projects": [
     {
       "name": "Artificial Connections",
-      "description": "An application built in Tauri, Artificial Connections is a lot like New York Times Connections, but LLM powered features.",
+      "description": "An application built in Tauri, Artificial Connections is a lot like New York Times Connections, but with LLM powered features.",
       "role": "",
       "image": "artificial_connections.png",
       "links": [
